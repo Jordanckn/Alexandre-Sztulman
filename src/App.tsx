@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { CookieBanner } from './components/CookieBanner';
 import { SEO } from './components/SEO';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -11,6 +12,7 @@ import { BusinessCriminalPage } from './pages/BusinessCriminalPage';
 import { InvestmentDisputesPage } from './pages/InvestmentDisputesPage';
 import { BlogPage } from './pages/BlogPage';
 import { ContactPage } from './pages/ContactPage';
+import { CookiesPage } from './pages/CookiesPage';
 import { Language } from './types';
 
 function ScrollToTop() {
@@ -65,7 +67,12 @@ function AppContent() {
         case '/contact':
           return {
             title: 'Contact',
-            description: 'Contactez le cabinet. 22 avenue Franklin D. Roosevelt, 75008 Paris. Tél: +33 1 42 96 32 40.'
+            description: 'Contactez le cabinet. 22 avenue Franklin D. Roosevelt, 75008 Paris. Tél: +33 6 59 41 09 15.'
+          };
+        case '/cookies':
+          return {
+            title: 'Politique de Cookies',
+            description: 'Informations sur l\'utilisation des cookies sur notre site et comment gérer vos préférences.'
           };
         default:
           return {
@@ -108,7 +115,12 @@ function AppContent() {
         case '/contact':
           return {
             title: 'Contact',
-            description: 'Contact the firm. 22 avenue Franklin D. Roosevelt, 75008 Paris. Tel: +33 1 42 96 32 40.'
+            description: 'Contact the firm. 22 avenue Franklin D. Roosevelt, 75008 Paris. Tel: +33 6 59 41 09 15.'
+          };
+        case '/cookies':
+          return {
+            title: 'Cookie Policy',
+            description: 'Information about cookie usage on our site and how to manage your preferences.'
           };
         default:
           return {
@@ -143,8 +155,10 @@ function AppContent() {
           <Route path="/expertise/investment-disputes" element={<InvestmentDisputesPage language={language} />} />
           <Route path="/blog" element={<BlogPage language={language} />} />
           <Route path="/contact" element={<ContactPage language={language} />} />
+          <Route path="/cookies" element={<CookiesPage language={language} />} />
         </Routes>
         <Footer language={language} />
+        <CookieBanner language={language} />
       </div>
     </>
   );

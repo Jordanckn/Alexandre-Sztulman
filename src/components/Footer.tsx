@@ -23,7 +23,7 @@ export function Footer({ language }: FooterProps) {
       contactInfo: 'Contact',
       address: '22 avenue Franklin D. Roosevelt',
       city: '75008 Paris',
-      phone: '+33 1 42 96 32 40',
+      phone: '+33 6 59 41 09 15',
       email: 'contact@sztulman-avocat.com',
       copyright: '© 2024 Maître Alexandre Sztulman. Tous droits réservés.',
       credit: 'Site réalisé par'
@@ -43,7 +43,7 @@ export function Footer({ language }: FooterProps) {
       contactInfo: 'Contact',
       address: '22 avenue Franklin D. Roosevelt',
       city: '75008 Paris',
-      phone: '+33 1 42 96 32 40',
+      phone: '+33 6 59 41 09 15',
       email: 'contact@sztulman-avocat.com',
       copyright: '© 2024 Alexandre Sztulman. All rights reserved.',
       credit: 'Website by'
@@ -59,9 +59,9 @@ export function Footer({ language }: FooterProps) {
           <div className="flex flex-col gap-4">
             <Link to="/" className="flex flex-col gap-1 w-fit hover:opacity-80 transition-opacity">
               <span className="text-sm font-serif font-bold tracking-wide">
-                <span className="text-base font-normal">A</span>LEXANDRE <span className="text-base font-normal">Sztulman</span>
+                <span className="text-base font-normal">A</span>LEXANDRE <span className="text-base font-normal">S</span>ZTULMAN
               </span>
-              <span className="text-xs tracking-wider font-serif">Avocat au Barreau de Paris</span>
+              <span className="text-xs tracking-wider font-serif">Avocat</span>
             </Link>
             <p className="text-sm text-white/80 mt-2">{t.address}</p>
             <p className="text-sm text-white/80">{t.city}</p>
@@ -125,12 +125,7 @@ export function Footer({ language }: FooterProps) {
             <h3 className="text-sm font-semibold mb-4 font-serif">{t.contactInfo}</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link to="/contact" className="text-white/80 hover:text-white transition-colors">
-                  {t.contact}
-                </Link>
-              </li>
-              <li>
-                <a href="tel:+33142963240" className="text-white/80 hover:text-white transition-colors">
+                <a href="tel:+33659410915" className="text-white/80 hover:text-white transition-colors">
                   {t.phone}
                 </a>
               </li>
@@ -156,9 +151,9 @@ export function Footer({ language }: FooterProps) {
                 </button>
               </li>
               <li>
-                <button className="text-white/80 hover:text-white transition-colors">
+                <Link to="/cookies" className="text-white/80 hover:text-white transition-colors">
                   {t.cookies}
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
