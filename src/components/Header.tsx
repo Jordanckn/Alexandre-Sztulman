@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Language } from '../types';
@@ -10,6 +10,7 @@ interface HeaderProps {
 
 export function Header({ language, onLanguageChange }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(false);
   const location = useLocation();
 
   const menuItems = {
@@ -133,17 +134,33 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
               if (item.submenu) {
                 return (
                   <div key={item.name} className="py-2">
-                    <div className="font-medium text-primary-700 px-2 py-2">{item.name}</div>
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.path}
-                        to={subItem.path}
-                        className="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
+                    <button
+                      onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)}
+                      className="w-full flex items-center justify-between font-medium text-primary-700 px-2 py-2"
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown
+                        size={20}
+                        className={`transition-transform ${mobileSubmenuOpen ? 'rotate-180' : ''}`}
+                      />
+                    </button>
+                    {mobileSubmenuOpen && (
+                      <div className="bg-slate-50">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.path}
+                            to={subItem.path}
+                            className="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50"
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setMobileSubmenuOpen(false);
+                            }}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 );
               }
