@@ -52,7 +52,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             to="/"
             className="flex flex-col transition-colors"
           >
-            <span className="text-lg font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors">
+            <span className="text-lg font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors font-garamond">
               ALEXANDRE SZTULMAN
             </span>
             <span className="text-xs tracking-wider text-slate-600 uppercase">

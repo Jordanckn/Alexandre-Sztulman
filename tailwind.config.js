@@ -18,6 +18,9 @@ export default {
           900: '#001c33',
         },
       },
+      fontFamily: {
+        garamond: ['"EB Garamond"', 'serif'],
+      },
     },
   },
   plugins: [],
