@@ -58,10 +58,12 @@ export function Footer({ language }: FooterProps) {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="flex flex-col gap-4">
             <Link to="/" className="flex flex-col gap-1 w-fit hover:opacity-80 transition-opacity">
-              <span className="text-sm font-serif font-bold tracking-wide">
-                <span className="text-base font-normal">A</span>LEXANDRE <span className="text-base font-normal">S</span>ZTULMAN
+              <span className="text-base font-bold tracking-wide text-white font-serif uppercase">
+                <span className="text-xl font-normal">A</span>LEXANDRE <span className="text-xl font-normal">S</span>ZTULMAN
               </span>
-              <span className="text-xs tracking-wider font-serif">AVOCAT AU BARREAU DE PARIS</span>
+              <span className="text-xs tracking-wider text-white/90 uppercase font-serif">
+                Avocat au Barreau de Paris
+              </span>
             </Link>
             <p className="text-sm text-white/80 mt-2">{t.address}</p>
             <p className="text-sm text-white/80">{t.city}</p>
