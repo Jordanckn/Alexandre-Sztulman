@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react';
 import { Language } from '../types';
+import heroImage from '../assets/pexels-maria-20711682-11001707.webp';
 
 interface HeroProps {
   language: Language;
@@ -54,18 +55,12 @@ export function Hero({ language, onContactClick }: HeroProps) {
           </div>
 
           <div className="hidden lg:flex justify-center">
-            <div className="w-96 h-96 relative">
-              <div className="absolute inset-0 bg-primary-700/5 rounded-sm transform rotate-3"></div>
-              <div className="absolute inset-0 bg-primary-700/10 rounded-sm transform -rotate-3"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-80 h-80 bg-gradient-to-br from-primary-700 to-primary-900 rounded-sm flex items-center justify-center">
-                  <div className="text-center text-white p-8">
-                    <div className="text-6xl font-serif mb-4">AS</div>
-                    <div className="text-sm opacity-75">Docteur en Droit</div>
-                    <div className="text-sm opacity-75">PhD in Law</div>
-                  </div>
-                </div>
-              </div>
+            <div className="w-full max-w-lg">
+              <img
+                src={heroImage}
+                alt="Palais de Justice"
+                className="w-full h-auto rounded-sm shadow-xl object-cover"
+              />
             </div>
           </div>
         </div>

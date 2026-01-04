@@ -1,4 +1,4 @@
-import { Languages, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Language } from '../types';
@@ -10,7 +10,6 @@ interface HeaderProps {
 
 export function Header({ language, onLanguageChange }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [expertiseOpen, setExpertiseOpen] = useState(false);
   const location = useLocation();
 
   const menuItems = {
@@ -67,25 +66,21 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
                   <div
                     key={item.name}
                     className="relative group"
-                    onMouseEnter={() => setExpertiseOpen(true)}
-                    onMouseLeave={() => setExpertiseOpen(false)}
                   >
                     <button className="text-slate-600 hover:text-primary-700 transition-colors text-sm font-medium py-2">
                       {item.name}
                     </button>
-                    {expertiseOpen && (
-                      <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-sm min-w-[280px] py-2">
-                        {item.submenu.map((subItem) => (
-                          <Link
-                            key={subItem.path}
-                            to={subItem.path}
-                            className="block px-4 py-3 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                    <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-sm min-w-[280px] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.path}
+                          to={subItem.path}
+                          className="block px-4 py-3 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 );
               }
@@ -105,22 +100,20 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             })}
             <button
               onClick={() => onLanguageChange(language === 'fr' ? 'en' : 'fr')}
-              className="flex items-center space-x-1 text-slate-600 hover:text-primary-700 transition-colors"
+              className="flex items-center space-x-1 text-slate-600 hover:text-primary-700 transition-colors text-lg"
               aria-label={language === 'fr' ? 'Switch to English' : 'Passer au français'}
             >
-              <Languages size={18} />
-              <span className="text-sm font-medium uppercase">{language === 'fr' ? 'EN' : 'FR'}</span>
+              <span>{language === 'fr' ? '🇬🇧' : '🇫🇷'}</span>
             </button>
           </div>
 
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={() => onLanguageChange(language === 'fr' ? 'en' : 'fr')}
-              className="flex items-center space-x-1 text-slate-600"
+              className="flex items-center text-lg"
               aria-label={language === 'fr' ? 'Switch to English' : 'Passer au français'}
             >
-              <Languages size={18} />
-              <span className="text-sm font-medium uppercase">{language === 'fr' ? 'EN' : 'FR'}</span>
+              <span>{language === 'fr' ? '🇬🇧' : '🇫🇷'}</span>
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
