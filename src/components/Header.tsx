@@ -53,7 +53,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             className="flex flex-col transition-colors items-center"
           >
             <span className="text-xl font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors font-serif uppercase">
-              <span className="text-3xl">A</span>LEXANDRE <span className="text-3xl">S</span>ZTULMAN
+              <span className="text-3xl font-normal">A</span>LEXANDRE <span className="text-3xl font-normal">S</span>ZTULMAN
             </span>
             <span className="text-xs tracking-wider text-slate-600 uppercase font-serif">
               Avocat au Barreau de Paris
