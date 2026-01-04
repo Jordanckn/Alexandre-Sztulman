@@ -15,7 +15,7 @@ export function Expertise({ language }: ExpertiseProps) {
         },
         {
           title: 'Droit Pénal des Affaires',
-          description: 'Défense en droit pénal des affaires des personnes mises en cause dans des dossiers économiques et financiers (corruption, abus de biens sociaux, escroquerie, détournement de fonds, blanchiment, fraude, etc.), y compris dans des contextes internationaux. Maître Alexandre Sztulman assiste également les victimes de criminalité économique : dépôt de plainte, constitution de partie civile, stratégie probatoire et réparation du préjudice, à toutes les étapes de la procédure.'
+          description: 'Défense en droit pénal des affaires des personnes mises en cause dans des dossiers économiques et financiers (corruption, abus de biens sociaux, escroquerie, détournement de fonds, blanchiment, fraude, etc.), y compris dans des contextes internationaux.\n\n Maître Alexandre Sztulman assiste également les victimes de criminalité économique : dépôt de plainte, constitution de partie civile, stratégie probatoire et réparation du préjudice, à toutes les étapes de la procédure.'
         },
         {
           title: 'Droit des Investissements Internationaux',
