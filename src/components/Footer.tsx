@@ -59,7 +59,7 @@ export function Footer({ language }: FooterProps) {
           <div className="flex flex-col gap-4">
             <Link to="/" className="flex flex-col gap-1 w-fit hover:opacity-80 transition-opacity">
               <span className="text-sm font-serif font-bold tracking-wide">
-                <span className="text-base font-normal">A</span>LEXANDRE <span className="text-base font-normal">S</span>
+                <span className="text-base font-normal">A</span>LEXANDRE <span className="text-base font-normal">Sztulman</span>
               </span>
               <span className="text-xs tracking-wider font-serif">Avocat au Barreau de Paris</span>
             </Link>
