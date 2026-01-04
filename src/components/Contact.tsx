@@ -60,8 +60,8 @@ export function Contact({ language }: ContactProps) {
   return (
     <section id="contact" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-serif text-slate-900 mb-6">{t.title}</h2>
-        <div className="h-1 w-20 bg-slate-800 mb-8"></div>
+        <h2 className="text-4xl font-serif text-primary-900 mb-6">{t.title}</h2>
+        <div className="h-1 w-20 bg-primary-700 mb-8"></div>
         <p className="text-slate-600 mb-16 max-w-2xl">{t.intro}</p>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -77,7 +77,7 @@ export function Contact({ language }: ContactProps) {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-slate-800 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-primary-700 focus:border-transparent outline-none transition-all"
                 />
               </div>
 
@@ -91,7 +91,7 @@ export function Contact({ language }: ContactProps) {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-slate-800 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-primary-700 focus:border-transparent outline-none transition-all"
                 />
               </div>
 
@@ -111,7 +111,7 @@ export function Contact({ language }: ContactProps) {
 
               <button
                 type="submit"
-                className="w-full px-8 py-3 bg-slate-800 text-white hover:bg-slate-700 transition-colors rounded-sm font-medium flex items-center justify-center gap-2"
+                className="w-full px-8 py-3 bg-primary-700 text-white hover:bg-primary-600 transition-colors rounded-sm font-medium flex items-center justify-center gap-2"
               >
                 {t.formButton}
                 <Send size={18} />
@@ -129,7 +129,7 @@ export function Contact({ language }: ContactProps) {
             <div className="bg-white p-8 rounded-sm shadow-sm space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <MapPin className="text-slate-700" size={24} />
+                  <MapPin className="text-primary-700" size={24} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{t.address}</h3>
@@ -143,11 +143,11 @@ export function Contact({ language }: ContactProps) {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <Phone className="text-slate-700" size={24} />
+                  <Phone className="text-primary-700" size={24} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{t.phone}</h3>
-                  <a href="tel:+33142963240" className="text-slate-600 hover:text-slate-900 transition-colors">
+                  <a href="tel:+33142963240" className="text-slate-600 hover:text-primary-700 transition-colors">
                     +33 1 42 96 32 40
                   </a>
                 </div>
@@ -155,19 +155,19 @@ export function Contact({ language }: ContactProps) {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <Mail className="text-slate-700" size={24} />
+                  <Mail className="text-primary-700" size={24} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{t.email}</h3>
-                  <a href="mailto:asztulman@moliere-avocats.fr" className="text-slate-600 hover:text-slate-900 transition-colors break-all">
-                    asztulman@moliere-avocats.fr
+                  <a href="mailto:contact@sztulman-avocat.com" className="text-slate-600 hover:text-primary-700 transition-colors break-all">
+                    contact@sztulman-avocat.com
                   </a>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <Linkedin className="text-slate-700" size={24} />
+                  <Linkedin className="text-primary-700" size={24} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">LinkedIn</h3>
@@ -175,7 +175,7 @@ export function Contact({ language }: ContactProps) {
                     href="https://www.linkedin.com/in/alexandre-sztulman"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-600 hover:text-slate-900 transition-colors"
+                    className="text-slate-600 hover:text-primary-700 transition-colors"
                   >
                     Alexandre Sztulman
                   </a>

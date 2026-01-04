@@ -34,12 +34,12 @@ export function Publications({ language }: PublicationsProps) {
   return (
     <section id="publications" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-serif text-slate-900 mb-6">{t.title}</h2>
-        <div className="h-1 w-20 bg-slate-800 mb-16"></div>
+        <h2 className="text-4xl font-serif text-primary-900 mb-6">{t.title}</h2>
+        <div className="h-1 w-20 bg-primary-700 mb-16"></div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <div className="bg-slate-800 h-96 rounded-sm flex items-center justify-center text-white p-8">
+            <div className="bg-primary-700 h-96 rounded-sm flex items-center justify-center text-white p-8">
               <div className="text-center">
                 <BookOpen size={64} className="mx-auto mb-6 opacity-90" />
                 <h3 className="text-2xl font-serif mb-2">EU Sanctions Litigation</h3>
@@ -55,7 +55,7 @@ export function Publications({ language }: PublicationsProps) {
               href="https://www.routledge.com/EU-Sanctions-Litigation-Fundamental-Rights-and-International-Security/Sztulman/p/book/9781041019411"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-slate-800 text-white hover:bg-slate-700 transition-colors rounded-sm font-medium"
+              className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-primary-700 text-white hover:bg-primary-600 transition-colors rounded-sm font-medium"
             >
               {t.buyButton}
               <ExternalLink size={16} />
@@ -64,7 +64,7 @@ export function Publications({ language }: PublicationsProps) {
 
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-slate-900 mb-4">{t.bookTitle}</h3>
+              <h3 className="text-2xl font-semibold text-primary-900 mb-4">{t.bookTitle}</h3>
               <div className="space-y-2 mb-4 text-sm text-slate-500">
                 <p>{t.publisher}</p>
                 <p>{t.pages}</p>
@@ -73,7 +73,7 @@ export function Publications({ language }: PublicationsProps) {
             </div>
 
             <div className="border-t border-slate-200 pt-8">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">{t.teachingTitle}</h3>
+              <h3 className="text-xl font-semibold text-primary-900 mb-4">{t.teachingTitle}</h3>
               <p className="text-slate-600 leading-relaxed">{t.teachingText}</p>
             </div>
           </div>

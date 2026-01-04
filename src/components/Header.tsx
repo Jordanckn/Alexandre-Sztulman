@@ -16,13 +16,13 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
   const menuItems = {
     fr: [
       { name: 'Accueil', path: '/' },
-      { name: 'À propos', path: '/about' },
+      { name: 'Le Cabinet', path: '/about' },
       {
-        name: 'Expertise',
+        name: 'Expertises',
         submenu: [
           { name: 'Sanctions Internationales', path: '/expertise/sanctions' },
           { name: 'Droit Pénal des Affaires', path: '/expertise/business-criminal' },
-          { name: 'Contentieux des Investissements', path: '/expertise/investment-disputes' }
+          { name: 'Droit des Investissements Internationaux', path: '/expertise/investment-disputes' }
         ]
       },
       { name: 'Publications', path: '/blog' },
@@ -30,13 +30,13 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
     ],
     en: [
       { name: 'Home', path: '/' },
-      { name: 'About', path: '/about' },
+      { name: 'The Firm', path: '/about' },
       {
         name: 'Practice Areas',
         submenu: [
           { name: 'International Sanctions', path: '/expertise/sanctions' },
           { name: 'Business Criminal Law', path: '/expertise/business-criminal' },
-          { name: 'Investment Disputes', path: '/expertise/investment-disputes' }
+          { name: 'International Investment Law', path: '/expertise/investment-disputes' }
         ]
       },
       { name: 'Publications', path: '/blog' },
@@ -50,9 +50,14 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
         <div className="flex justify-between items-center h-20">
           <Link
             to="/"
-            className="text-xl font-serif text-slate-800 hover:text-slate-600 transition-colors"
+            className="flex flex-col transition-colors"
           >
-            Me Alexandre Sztulman
+            <span className="text-lg font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors">
+              ALEXANDRE SZTULMAN
+            </span>
+            <span className="text-xs tracking-wider text-slate-600 uppercase">
+              Avocat au Barreau de Paris
+            </span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-6">
@@ -65,16 +70,16 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
                     onMouseEnter={() => setExpertiseOpen(true)}
                     onMouseLeave={() => setExpertiseOpen(false)}
                   >
-                    <button className="text-slate-600 hover:text-slate-900 transition-colors text-sm font-medium py-2">
+                    <button className="text-slate-600 hover:text-primary-700 transition-colors text-sm font-medium py-2">
                       {item.name}
                     </button>
                     {expertiseOpen && (
-                      <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-sm min-w-[250px] py-2">
+                      <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-sm min-w-[280px] py-2">
                         {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.path}
                             to={subItem.path}
-                            className="block px-4 py-3 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                            className="block px-4 py-3 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-700 transition-colors"
                           >
                             {subItem.name}
                           </Link>
@@ -90,8 +95,8 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
                   to={item.path}
                   className={`text-sm font-medium transition-colors ${
                     location.pathname === item.path
-                      ? 'text-slate-900'
-                      : 'text-slate-600 hover:text-slate-900'
+                      ? 'text-primary-700'
+                      : 'text-slate-600 hover:text-primary-700'
                   }`}
                 >
                   {item.name}
@@ -100,7 +105,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             })}
             <button
               onClick={() => onLanguageChange(language === 'fr' ? 'en' : 'fr')}
-              className="flex items-center space-x-1 text-slate-600 hover:text-slate-900 transition-colors"
+              className="flex items-center space-x-1 text-slate-600 hover:text-primary-700 transition-colors"
               aria-label={language === 'fr' ? 'Switch to English' : 'Passer au français'}
             >
               <Languages size={18} />
@@ -119,7 +124,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-slate-600 hover:text-slate-900"
+              className="text-slate-600 hover:text-primary-700"
               aria-label="Menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -133,12 +138,12 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
               if (item.submenu) {
                 return (
                   <div key={item.name} className="py-2">
-                    <div className="font-medium text-slate-900 px-2 py-2">{item.name}</div>
+                    <div className="font-medium text-primary-700 px-2 py-2">{item.name}</div>
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.path}
                         to={subItem.path}
-                        className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"
+                        className="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {subItem.name}
@@ -151,7 +156,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="block py-3 px-2 text-slate-600 hover:text-slate-900 transition-colors"
+                  className="block py-3 px-2 text-slate-600 hover:text-primary-700 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
