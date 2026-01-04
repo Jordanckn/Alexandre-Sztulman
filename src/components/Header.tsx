@@ -51,7 +51,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             to="/"
             className="flex flex-col transition-colors items-center"
           >
-            <span className="text-xl font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors font-trajan">
+            <span className="text-xl font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors font-garamond">
               <span className="text-3xl">A</span>lexandre <span className="text-3xl">S</span>ztulman
             </span>
             <span className="text-xs tracking-wider text-slate-600 uppercase">
@@ -100,20 +100,22 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
             })}
             <button
               onClick={() => onLanguageChange(language === 'fr' ? 'en' : 'fr')}
-              className="flex items-center space-x-1 text-slate-600 hover:text-primary-700 transition-colors text-lg"
+              className="flex items-center gap-2 px-3 py-2 bg-primary-50 hover:bg-primary-100 text-primary-700 rounded-lg transition-colors text-sm font-medium"
               aria-label={language === 'fr' ? 'Switch to English' : 'Passer au français'}
             >
-              <span>{language === 'fr' ? '🇬🇧' : '🇫🇷'}</span>
+              <span className="text-lg">{language === 'fr' ? '🇬🇧' : '🇫🇷'}</span>
+              <span>{language === 'fr' ? 'EN' : 'FR'}</span>
             </button>
           </div>
 
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={() => onLanguageChange(language === 'fr' ? 'en' : 'fr')}
-              className="flex items-center text-lg"
+              className="flex items-center gap-2 px-3 py-2 bg-primary-50 hover:bg-primary-100 text-primary-700 rounded-lg transition-colors text-sm font-medium"
               aria-label={language === 'fr' ? 'Switch to English' : 'Passer au français'}
             >
-              <span>{language === 'fr' ? '🇬🇧' : '🇫🇷'}</span>
+              <span className="text-lg">{language === 'fr' ? '🇬🇧' : '🇫🇷'}</span>
+              <span>{language === 'fr' ? 'EN' : 'FR'}</span>
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
