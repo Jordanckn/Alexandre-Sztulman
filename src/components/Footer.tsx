@@ -61,7 +61,7 @@ export function Footer({ language }: FooterProps) {
               <span className="text-sm font-serif font-bold tracking-wide">
                 <span className="text-base font-normal">A</span>LEXANDRE <span className="text-base font-normal">S</span>ZTULMAN
               </span>
-              <span className="text-xs tracking-wider font-serif">Avocat au barreau de Paris</span>
+              <span className="text-xs tracking-wider font-serif">AVOCAT AU BARREAU DE PARIS</span>
             </Link>
             <p className="text-sm text-white/80 mt-2">{t.address}</p>
             <p className="text-sm text-white/80">{t.city}</p>
