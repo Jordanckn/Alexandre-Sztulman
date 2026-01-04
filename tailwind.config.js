@@ -20,6 +20,7 @@ export default {
       },
       fontFamily: {
         garamond: ['"EB Garamond"', 'serif'],
+        trajan: ['"Playfair Display"', 'serif'],
       },
     },
   },

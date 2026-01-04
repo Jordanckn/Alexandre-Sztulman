@@ -23,26 +23,26 @@ export function Footer({ language }: FooterProps) {
   const t = content[language];
 
   return (
-    <footer className="bg-primary-900 text-slate-300 py-12">
+    <footer className="bg-primary-700 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start gap-2">
             <p className="text-sm">{t.copyright}</p>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-white/80">
               {t.credit}{' '}
               <a
                 href="https://webfityou.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-300 hover:text-white transition-colors underline"
+                className="text-white hover:text-white/80 transition-colors underline"
               >
                 WebFitYou
               </a>
             </p>
           </div>
           <div className="flex gap-6 text-sm">
-            <button className="hover:text-white transition-colors">{t.legal}</button>
-            <button className="hover:text-white transition-colors">{t.privacy}</button>
+            <button className="hover:text-white/80 transition-colors">{t.legal}</button>
+            <button className="hover:text-white/80 transition-colors">{t.privacy}</button>
           </div>
         </div>
       </div>

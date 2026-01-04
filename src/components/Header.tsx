@@ -49,10 +49,10 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
         <div className="flex justify-between items-center h-20">
           <Link
             to="/"
-            className="flex flex-col transition-colors"
+            className="flex flex-col transition-colors items-center"
           >
-            <span className="text-lg font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors font-garamond">
-              ALEXANDRE SZTULMAN
+            <span className="text-xl font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors font-trajan">
+              <span className="text-3xl">A</span>lexandre <span className="text-3xl">S</span>ztulman
             </span>
             <span className="text-xs tracking-wider text-slate-600 uppercase">
               Avocat au Barreau de Paris
