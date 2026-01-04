@@ -10,20 +10,20 @@ export function About({ language }: AboutProps) {
       title: 'Le Cabinet de Maître Alexandre Sztulman',
       sections: [
         {
-          text: "Le cabinet de Maître Alexandre Sztulman, avocat individuel au Barreau de Paris, intervient dans des dossiers à forts enjeux juridiques, institutionnels et économiques, en France comme à l'échelle européenne."
+          text: "Le cabinet de Maître Alexandre Sztulman, avocat individuel au Barreau de Paris, intervient dans des dossiers à <strong>forts enjeux juridiques, institutionnels et économiques</strong>, en France comme à l'échelle européenne."
         },
         {
-          text: "Sa pratique repose sur une approche rigoureuse, technique et stratégique, nourrie par une expertise académique reconnue et une connaissance approfondie du fonctionnement des administrations françaises et européennes."
+          text: "Sa pratique repose sur une <strong>approche rigoureuse, technique et stratégique</strong>, nourrie par une <strong>expertise académique reconnue</strong> et une connaissance approfondie du fonctionnement des administrations françaises et européennes."
         },
         {
-          text: "Installé à Paris 8ᵉ, le cabinet accompagne particuliers, entreprises, dirigeants et institutions publiques dans des contextes complexes exigeant discrétion absolue, maîtrise normative et efficacité opérationnelle."
+          text: "Installé à Paris 8ᵉ, le cabinet accompagne particuliers, entreprises, dirigeants et institutions publiques dans des <strong>contextes complexes</strong> exigeant <strong>discrétion absolue, maîtrise normative et efficacité opérationnelle</strong>."
         },
         {
           subtitle: "Un parcours académique et institutionnel d'excellence",
-          text: "Maître Alexandre Sztulman est Docteur en droit, spécialisé en droit pénal et en droit européen. Il est titulaire d'un LL.M. en droit européen délivré par l'Université de Luxembourg, ainsi que d'un Master en droit pénal international et des affaires obtenu à l'Université Paris 1 Panthéon-Sorbonne. Il a également poursuivi des études à la Higher School of Economics de Moscou, renforçant une formation juridique résolument tournée vers l'international."
+          text: "Maître Alexandre Sztulman est <strong>Docteur en droit</strong>, spécialisé en <strong>droit pénal et en droit européen</strong>. Il est titulaire d'un <strong>LL.M. en droit européen</strong> délivré par l'Université de Luxembourg, ainsi que d'un <strong>Master en droit pénal international et des affaires</strong> obtenu à l'Université Paris 1 Panthéon-Sorbonne. Il a également poursuivi des études à la Higher School of Economics de Moscou, renforçant une formation juridique résolument tournée vers l'international."
         },
         {
-          text: "Parallèlement à son activité d'avocat, Maître Alexandre Sztulman enseigne le droit des sanctions internationales et européennes à l'Université Paris 1 Panthéon-Sorbonne. Il intervient également comme chargé d'enseignement en :",
+          text: "Parallèlement à son activité d'avocat, Maître Alexandre Sztulman enseigne le <strong>droit des sanctions internationales et européennes</strong> à l'Université Paris 1 Panthéon-Sorbonne. Il intervient également comme chargé d'enseignement en :",
           list: [
             "droit pénal général",
             "procédure pénale",
@@ -33,13 +33,13 @@ export function About({ language }: AboutProps) {
         },
         {
           subtitle: "Une expérience pratique au cœur des institutions européennes et étatiques",
-          text: "Avant de fonder son cabinet, Maître Alexandre Sztulman a exercé au sein de cabinets d'affaires internationaux, où il a acquis une solide expérience des problématiques transfrontalières et des contentieux complexes."
+          text: "Avant de fonder son cabinet, Maître Alexandre Sztulman a exercé au sein de <strong>cabinets d'affaires internationaux</strong>, où il a acquis une solide expérience des <strong>problématiques transfrontalières et des contentieux complexes</strong>."
         },
         {
-          text: "Il a également travaillé auprès de la Cour de justice de l'Union européenne, participant à l'analyse et au traitement de questions juridiques européennes de premier plan."
+          text: "Il a également travaillé auprès de la <strong>Cour de justice de l'Union européenne</strong>, participant à l'analyse et au traitement de questions juridiques européennes de premier plan."
         },
         {
-          text: "Son parcours institutionnel inclut aussi une expérience au sein de la Direction générale du Trésor, notamment au bureau des sanctions internationales et financières ainsi qu'au bureau de la lutte contre la criminalité financière. Cette immersion au sein de l'administration lui confère une compréhension concrète des mécanismes décisionnels, des contraintes réglementaires et des logiques de contrôle propres aux autorités publiques."
+          text: "Son parcours institutionnel inclut aussi une expérience au sein de la <strong>Direction générale du Trésor</strong>, notamment au bureau des <strong>sanctions internationales et financières</strong> ainsi qu'au bureau de la <strong>lutte contre la criminalité financière</strong>. Cette immersion au sein de l'administration lui confère une compréhension concrète des mécanismes décisionnels, des contraintes réglementaires et des logiques de contrôle propres aux autorités publiques."
         },
         {
           subtitle: "Une expertise reconnue en droit pénal, droit européen et libertés fondamentales",
@@ -54,19 +54,19 @@ export function About({ language }: AboutProps) {
           ]
         },
         {
-          text: "Une attention particulière est portée aux sanctions internationales et européennes, domaine nécessitant une parfaite maîtrise des normes européennes, des régimes de sanctions, et des interactions entre droit interne, droit de l'Union et droit international."
+          text: "Une attention particulière est portée aux <strong>sanctions internationales et européennes</strong>, domaine nécessitant une parfaite maîtrise des normes européennes, des régimes de sanctions, et des interactions entre droit interne, droit de l'Union et droit international."
         },
         {
           subtitle: "Une pratique fondée sur la discrétion, la technicité et l'accessibilité",
           text: "Le cabinet de Maître Alexandre Sztulman se distingue par :",
           list: [
-            "Une approche strictement confidentielle, adaptée aux situations sensibles",
-            "Une analyse juridique approfondie, fondée sur la doctrine, la jurisprudence et la pratique administrative",
-            "Une accessibilité directe de l'avocat, garantissant un suivi personnel de chaque dossier"
+            "Une <strong>approche strictement confidentielle</strong>, adaptée aux situations sensibles",
+            "Une <strong>analyse juridique approfondie</strong>, fondée sur la doctrine, la jurisprudence et la pratique administrative",
+            "Une <strong>accessibilité directe de l'avocat</strong>, garantissant un suivi personnel de chaque dossier"
           ]
         },
         {
-          text: "Chaque intervention est conduite avec une exigence constante de précision, de loyauté et d'indépendance, dans le strict respect des règles déontologiques de la profession d'avocat et du secret professionnel."
+          text: "Chaque intervention est conduite avec une exigence constante de <strong>précision, de loyauté et d'indépendance</strong>, dans le strict respect des règles déontologiques de la profession d'avocat et du secret professionnel."
         },
         {
           subtitle: "Un accompagnement sur mesure en France et en Europe",
@@ -85,20 +85,20 @@ export function About({ language }: AboutProps) {
       title: 'The Law Firm of Maître Alexandre Sztulman',
       sections: [
         {
-          text: "The law firm of Maître Alexandre Sztulman, a sole practitioner admitted to the Paris Bar, handles cases with significant legal, institutional, and economic stakes, both in France and across Europe."
+          text: "The law firm of Maître Alexandre Sztulman, a sole practitioner admitted to the Paris Bar, handles cases with <strong>significant legal, institutional, and economic stakes</strong>, both in France and across Europe."
         },
         {
-          text: "His practice is based on a rigorous, technical, and strategic approach, supported by recognized academic expertise and in-depth knowledge of French and European administrative processes."
+          text: "His practice is based on a <strong>rigorous, technical, and strategic approach</strong>, supported by <strong>recognized academic expertise</strong> and in-depth knowledge of French and European administrative processes."
         },
         {
-          text: "Located in Paris 8th arrondissement, the firm assists individuals, businesses, executives, and public institutions in complex contexts requiring absolute discretion, regulatory mastery, and operational efficiency."
+          text: "Located in Paris 8th arrondissement, the firm assists individuals, businesses, executives, and public institutions in <strong>complex contexts</strong> requiring <strong>absolute discretion, regulatory mastery, and operational efficiency</strong>."
         },
         {
           subtitle: "An Outstanding Academic and Institutional Background",
-          text: "Maître Alexandre Sztulman holds a Ph.D. in Law, specializing in criminal law and European law. He earned an LL.M. in European Law from the University of Luxembourg, as well as a Master's degree in International and Business Criminal Law from Université Paris 1 Panthéon-Sorbonne. He also pursued studies at the Higher School of Economics in Moscow, strengthening a legal education firmly oriented toward international practice."
+          text: "Maître Alexandre Sztulman holds a <strong>Ph.D. in Law</strong>, specializing in <strong>criminal law and European law</strong>. He earned an <strong>LL.M. in European Law</strong> from the University of Luxembourg, as well as a <strong>Master's degree in International and Business Criminal Law</strong> from Université Paris 1 Panthéon-Sorbonne. He also pursued studies at the Higher School of Economics in Moscow, strengthening a legal education firmly oriented toward international practice."
         },
         {
-          text: "Alongside his practice as an attorney, Maître Alexandre Sztulman teaches international and European sanctions law at Université Paris 1 Panthéon-Sorbonne. He also serves as an instructor in:",
+          text: "Alongside his practice as an attorney, Maître Alexandre Sztulman teaches <strong>international and European sanctions law</strong> at Université Paris 1 Panthéon-Sorbonne. He also serves as an instructor in:",
           list: [
             "general criminal law",
             "criminal procedure",
@@ -108,13 +108,13 @@ export function About({ language }: AboutProps) {
         },
         {
           subtitle: "Practical Experience at the Heart of European and State Institutions",
-          text: "Before founding his firm, Maître Alexandre Sztulman practiced at international business law firms, where he gained solid experience in cross-border issues and complex litigation."
+          text: "Before founding his firm, Maître Alexandre Sztulman practiced at <strong>international business law firms</strong>, where he gained solid experience in <strong>cross-border issues and complex litigation</strong>."
         },
         {
-          text: "He also worked at the Court of Justice of the European Union, contributing to the analysis and handling of leading European legal matters."
+          text: "He also worked at the <strong>Court of Justice of the European Union</strong>, contributing to the analysis and handling of leading European legal matters."
         },
         {
-          text: "His institutional experience also includes time at the Directorate General of the Treasury, particularly in the international and financial sanctions office and the financial crime prevention office. This immersion within the administration provides him with a concrete understanding of decision-making mechanisms, regulatory constraints, and control processes specific to public authorities."
+          text: "His institutional experience also includes time at the <strong>Directorate General of the Treasury</strong>, particularly in the <strong>international and financial sanctions office</strong> and the <strong>financial crime prevention office</strong>. This immersion within the administration provides him with a concrete understanding of decision-making mechanisms, regulatory constraints, and control processes specific to public authorities."
         },
         {
           subtitle: "Recognized Expertise in Criminal Law, European Law, and Fundamental Freedoms",
@@ -129,19 +129,19 @@ export function About({ language }: AboutProps) {
           ]
         },
         {
-          text: "Particular attention is given to international and European sanctions, a field requiring perfect command of European norms, sanctions regimes, and interactions between domestic law, European Union law, and international law."
+          text: "Particular attention is given to <strong>international and European sanctions</strong>, a field requiring perfect command of European norms, sanctions regimes, and interactions between domestic law, European Union law, and international law."
         },
         {
           subtitle: "A Practice Founded on Discretion, Technical Expertise, and Accessibility",
           text: "The law firm of Maître Alexandre Sztulman is distinguished by:",
           list: [
-            "A strictly confidential approach, adapted to sensitive situations",
-            "In-depth legal analysis, based on doctrine, case law, and administrative practice",
-            "Direct accessibility to the attorney, ensuring personal supervision of each case"
+            "A <strong>strictly confidential approach</strong>, adapted to sensitive situations",
+            "<strong>In-depth legal analysis</strong>, based on doctrine, case law, and administrative practice",
+            "<strong>Direct accessibility to the attorney</strong>, ensuring personal supervision of each case"
           ]
         },
         {
-          text: "Each intervention is conducted with constant requirements of precision, loyalty, and independence, in strict compliance with the ethical rules of the legal profession and professional secrecy."
+          text: "Each intervention is conducted with constant requirements of <strong>precision, loyalty, and independence</strong>, in strict compliance with the ethical rules of the legal profession and professional secrecy."
         },
         {
           subtitle: "Tailored Support in France and Europe",
@@ -174,13 +174,14 @@ export function About({ language }: AboutProps) {
                   {section.subtitle}
                 </h3>
               )}
-              <p className="text-lg text-slate-700 leading-relaxed mb-4">
-                {section.text}
-              </p>
+              <p
+                className="text-lg text-slate-700 leading-relaxed mb-4 text-justify"
+                dangerouslySetInnerHTML={{ __html: section.text }}
+              />
               {section.list && (
-                <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-slate-700">
+                <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-slate-700 text-justify">
                   {section.list.map((item, idx) => (
-                    <li key={idx}>{item}</li>
+                    <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
                   ))}
                 </ul>
               )}

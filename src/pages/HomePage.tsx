@@ -1,6 +1,6 @@
 import { Language } from '../types';
 import { Hero } from '../components/Hero';
-import { About } from '../components/About';
+import { AboutSummary } from '../components/AboutSummary';
 import { Expertise } from '../components/Expertise';
 
 interface HomePageProps {
@@ -12,7 +12,7 @@ export function HomePage({ language, onContactClick }: HomePageProps) {
   return (
     <>
       <Hero language={language} onContactClick={onContactClick} />
-      <About language={language} />
+      <AboutSummary language={language} />
       <Expertise language={language} />
     </>
   );
