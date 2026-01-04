@@ -2,6 +2,7 @@ import { Language } from '../types';
 import { Hero } from '../components/Hero';
 import { AboutSummary } from '../components/AboutSummary';
 import { Expertise } from '../components/Expertise';
+import { FAQ } from '../components/FAQ';
 
 interface HomePageProps {
   language: Language;
@@ -14,6 +15,7 @@ export function HomePage({ language, onContactClick }: HomePageProps) {
       <Hero language={language} onContactClick={onContactClick} />
       <AboutSummary language={language} />
       <Expertise language={language} />
+      <FAQ language={language} />
     </>
   );
 }
