@@ -1,6 +1,7 @@
-import { MapPin, Phone, Mail, Linkedin, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Linkedin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { Language } from '../types';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 interface ContactProps {
   language: Language;
@@ -9,13 +10,15 @@ interface ContactProps {
 
 
 export function Contact({ language }: ContactProps) {
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     message: ''
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const content = {
     fr: {
@@ -24,13 +27,17 @@ export function Contact({ language }: ContactProps) {
       formName: 'Nom complet',
       formEmail: 'Email',
       formMessage: 'Votre message',
-      formButton: 'Envoyer',
+      formButton: 'Envoyer le message',
+      formButtonSending: 'Envoi en cours...',
       address: 'Adresse',
       phone: 'Téléphone',
       email: 'Email',
       hours: 'Horaires',
       hoursText: 'Lundi - Vendredi : 9h00 - 18h00',
-      successMessage: 'Merci pour votre message. Nous vous répondrons dans les plus brefs délais.'
+      successTitle: 'Message envoyé avec succès !',
+      successMessage: 'Merci pour votre message. Maître Sztulman vous répondra dans les plus brefs délais.',
+      errorTitle: 'Erreur d\'envoi',
+      errorMessage: 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer ou nous contacter directement par email.'
     },
     en: {
       title: 'Contact',
@@ -38,25 +45,65 @@ export function Contact({ language }: ContactProps) {
       formName: 'Full Name',
       formEmail: 'Email',
       formMessage: 'Your Message',
-      formButton: 'Send',
+      formButton: 'Send Message',
+      formButtonSending: 'Sending...',
       address: 'Address',
       phone: 'Phone',
       email: 'Email',
       hours: 'Hours',
       hoursText: 'Monday - Friday: 9:00 AM - 6:00 PM',
-      successMessage: 'Thank you for your message. We will respond as soon as possible.'
+      successTitle: 'Message sent successfully!',
+      successMessage: 'Thank you for your message. Me Sztulman will respond to you as soon as possible.',
+      errorTitle: 'Sending error',
+      errorMessage: 'An error occurred while sending the message. Please try again or contact us directly by email.'
     }
   };
 
   const t = content[language];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
+    setStatus('sending');
+    setErrorMessage('');
+
+    // Vérifier que les variables d'environnement sont définies
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS configuration missing. Please check your .env.local file.');
+      setStatus('error');
+      setErrorMessage('Configuration error. Please contact the administrator.');
+      return;
+    }
+
+    try {
+      const result = await emailjs.sendForm(
+        serviceId,
+        templateId,
+        formRef.current!,
+        publicKey
+      );
+
+      console.log('Email sent successfully:', result.text);
+      setStatus('success');
+
+      // Réinitialiser le formulaire après 5 secondes
+      setTimeout(() => {
+        setFormData({ from_name: '', from_email: '', message: '' });
+        setStatus('idle');
+      }, 5000);
+    } catch (error: any) {
+      console.error('Error sending email:', error);
+      setStatus('error');
+      setErrorMessage(error.text || 'Unknown error occurred');
+
+      // Réinitialiser le status après 7 secondes pour permettre un nouvel essai
+      setTimeout(() => {
+        setStatus('idle');
+      }, 7000);
+    }
   };
 
   return (
@@ -68,32 +115,36 @@ export function Contact({ language }: ContactProps) {
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="from_name" className="block text-sm font-medium text-slate-700 mb-2">
                   {t.formName}
                 </label>
                 <input
                   type="text"
-                  id="name"
+                  id="from_name"
+                  name="from_name"
                   required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-primary-700 focus:border-transparent outline-none transition-all"
+                  value={formData.from_name}
+                  onChange={(e) => setFormData({ ...formData, from_name: e.target.value })}
+                  disabled={status === 'sending'}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-primary-700 focus:border-transparent outline-none transition-all disabled:bg-slate-100 disabled:cursor-not-allowed"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="from_email" className="block text-sm font-medium text-slate-700 mb-2">
                   {t.formEmail}
                 </label>
                 <input
                   type="email"
-                  id="email"
+                  id="from_email"
+                  name="from_email"
                   required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-primary-700 focus:border-transparent outline-none transition-all"
+                  value={formData.from_email}
+                  onChange={(e) => setFormData({ ...formData, from_email: e.target.value })}
+                  disabled={status === 'sending'}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-primary-700 focus:border-transparent outline-none transition-all disabled:bg-slate-100 disabled:cursor-not-allowed"
                 />
               </div>
 
@@ -103,25 +154,45 @@ export function Contact({ language }: ContactProps) {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   required
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-slate-800 focus:border-transparent outline-none transition-all resize-none"
+                  disabled={status === 'sending'}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-slate-800 focus:border-transparent outline-none transition-all resize-none disabled:bg-slate-100 disabled:cursor-not-allowed"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-8 py-3 bg-primary-700 text-white hover:bg-primary-600 transition-colors rounded-sm font-medium flex items-center justify-center gap-2"
+                disabled={status === 'sending' || status === 'success'}
+                className="w-full px-8 py-3 bg-primary-700 text-white hover:bg-primary-600 transition-colors rounded-sm font-medium flex items-center justify-center gap-2 disabled:bg-slate-400 disabled:cursor-not-allowed"
               >
-                {t.formButton}
-                <Send size={18} />
+                {status === 'sending' ? t.formButtonSending : t.formButton}
+                <Send size={18} className={status === 'sending' ? 'animate-pulse' : ''} />
               </button>
 
-              {submitted && (
-                <div className="p-4 bg-green-50 border border-green-200 rounded-sm text-green-800 text-sm">
-                  {t.successMessage}
+              {status === 'success' && (
+                <div className="p-4 bg-green-50 border border-green-200 rounded-sm flex items-start gap-3 animate-fade-in">
+                  <CheckCircle size={24} className="text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-green-900 mb-1">{t.successTitle}</h4>
+                    <p className="text-sm text-green-700">{t.successMessage}</p>
+                  </div>
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div className="p-4 bg-red-50 border border-red-200 rounded-sm flex items-start gap-3 animate-fade-in">
+                  <AlertCircle size={24} className="text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-red-900 mb-1">{t.errorTitle}</h4>
+                    <p className="text-sm text-red-700">{t.errorMessage}</p>
+                    {errorMessage && (
+                      <p className="text-xs text-red-600 mt-2">Détails: {errorMessage}</p>
+                    )}
+                  </div>
                 </div>
               )}
             </form>

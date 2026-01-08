@@ -50,13 +50,13 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
         <div className="flex justify-between items-center h-20">
           <Link
             to="/"
-            className="flex flex-col transition-colors items-center"
+            className="flex flex-col transition-colors items-start"
           >
-            <span className="text-xl font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors font-serif uppercase">
-              <span className="text-3xl font-normal">A</span>LEXANDRE <span className="text-3xl font-normal">S</span>ZTULMAN
+            <span className="text-lg md:text-xl font-bold tracking-wide text-primary-700 hover:text-primary-600 transition-colors font-serif uppercase leading-none whitespace-nowrap">
+              <span className="text-2xl md:text-3xl font-normal">A</span>LEXANDRE <span className="text-2xl md:text-3xl font-normal">S</span>ZTULMAN
             </span>
-            <span className="text-xs tracking-wider text-slate-600 uppercase font-serif">
-              Avocat au Barreau de Paris
+            <span className="text-[10px] md:text-xs tracking-wider text-slate-600 uppercase font-serif mt-0.5">
+              {language === 'fr' ? 'Avocat au Barreau de Paris' : 'Attorney-at-Law, Paris Bar'}
             </span>
           </Link>
 
@@ -89,11 +89,10 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`text-sm font-medium transition-colors ${
-                    location.pathname === item.path
+                  className={`text-sm font-medium transition-colors ${location.pathname === item.path
                       ? 'text-primary-700'
                       : 'text-slate-600 hover:text-primary-700'
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </Link>
