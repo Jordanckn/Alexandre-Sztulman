@@ -22,23 +22,23 @@ export function AboutSummary({ language }: AboutSummaryProps) {
   const t = content[language];
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-serif text-primary-900 mb-6">{t.title}</h2>
-        <div className="h-1 w-20 bg-primary-700 mb-12"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-primary-900 mb-4 md:mb-6">{t.title}</h2>
+        <div className="h-1 w-16 md:w-20 bg-primary-700 mb-8 md:mb-12"></div>
 
         <div className="max-w-4xl">
           <p
-            className="text-lg text-slate-700 leading-relaxed mb-8 text-justify"
+            className="text-base md:text-lg text-slate-700 leading-relaxed mb-6 md:mb-8 text-justify"
             dangerouslySetInnerHTML={{ __html: t.summary }}
           />
           <Link
             to="/about"
-            className="inline-flex items-center px-6 py-3 bg-primary-700 text-white font-medium rounded-lg hover:bg-primary-800 transition-colors"
+            className="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 bg-primary-700 text-white font-medium rounded-lg hover:bg-primary-800 transition-colors text-sm md:text-base"
           >
             {t.button}
             <svg
-              className="ml-2 w-5 h-5"
+              className="ml-2 w-4 h-4 md:w-5 md:h-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

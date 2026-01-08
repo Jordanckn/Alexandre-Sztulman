@@ -152,8 +152,8 @@ export function Contact({ language }: ContactProps) {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{t.phone}</h3>
-                  <a href="tel:+33142963240" className="text-slate-600 hover:text-primary-700 transition-colors">
-                    +33 1 42 96 32 40
+                  <a href="tel:+33659410915" className="text-slate-600 hover:text-primary-700 transition-colors">
+                    +33 6 59 41 09 15
                   </a>
                 </div>
               </div>
@@ -164,8 +164,8 @@ export function Contact({ language }: ContactProps) {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{t.email}</h3>
-                  <a href="mailto:contact@sztulman-avocat.com" className="text-slate-600 hover:text-primary-700 transition-colors break-all">
-                    contact@sztulman-avocat.com
+                  <a href="mailto:asztulman@moliere-avocats.fr" className="text-slate-600 hover:text-primary-700 transition-colors break-all">
+                    asztulman@moliere-avocats.fr
                   </a>
                 </div>
               </div>

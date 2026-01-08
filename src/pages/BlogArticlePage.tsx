@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Language } from '../types';
-import { Calendar, ArrowLeft, Tag } from 'lucide-react';
+import { Calendar, ArrowLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 interface BlogArticlePageProps {

@@ -154,10 +154,10 @@ export function CookiesPage({ language }: CookiesPageProps) {
               {t.contactDesc}
             </p>
             <a
-              href="mailto:contact@sztulman-avocat.com"
+              href="mailto:asztulman@moliere-avocats.fr"
               className="text-primary-700 hover:text-primary-600 font-medium transition-colors"
             >
-              contact@sztulman-avocat.com
+              asztulman@moliere-avocats.fr
             </a>
           </section>
 

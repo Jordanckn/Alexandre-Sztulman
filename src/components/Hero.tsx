@@ -26,42 +26,44 @@ export function Hero({ language, onContactClick }: HeroProps) {
   const t = content[language];
 
   return (
-    <section id="home" className="min-h-screen flex items-stretch pt-20">
-      <div className="w-1/2 bg-primary-700 flex items-center">
-        <div className="px-12 py-20 space-y-8 w-full">
-          <div>
-            <h1 className="text-6xl font-serif text-white mb-3">{t.name}</h1>
-            <p className="text-2xl text-white/95 font-medium">{t.title}</p>
-          </div>
-
-          <div className="h-px bg-white/40 w-24"></div>
-
-          <p className="text-lg text-white/90 leading-relaxed">{t.tagline}</p>
-
-          <div className="flex flex-col gap-4 items-start pt-4">
-            <button
-              onClick={onContactClick}
-              className="px-8 py-3 bg-white text-primary-700 hover:bg-slate-100 transition-colors rounded-sm font-medium"
-            >
-              {t.contact}
-            </button>
-
-            <a href="mailto:contact@sztulman-avocat.com" className="flex items-center gap-2 text-sm text-white/90 hover:text-white transition-colors">
-              <Mail size={16} />
-              <span>contact@sztulman-avocat.com</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
+    <section id="home" className="min-h-screen flex flex-col md:flex-row items-stretch pt-20">
+      {/* Image - Première sur mobile, à droite sur desktop */}
       <div
-        className="w-1/2 bg-cover bg-center"
+        className="w-full md:w-1/2 min-h-[50vh] md:min-h-0 bg-cover bg-center md:order-2"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       ></div>
+
+      {/* Texte - Deuxième sur mobile, à gauche sur desktop */}
+      <div className="w-full md:w-1/2 bg-primary-700 flex items-center md:order-1">
+        <div className="px-6 py-12 md:px-12 md:py-20 space-y-6 md:space-y-8 w-full">
+          <div>
+            <h1 className="text-4xl md:text-6xl font-serif text-white mb-2 md:mb-3">{t.name}</h1>
+            <p className="text-xl md:text-2xl text-white/95 font-medium">{t.title}</p>
+          </div>
+
+          <div className="h-px bg-white/40 w-16 md:w-24"></div>
+
+          <p className="text-base md:text-lg text-white/90 leading-relaxed">{t.tagline}</p>
+
+          <div className="flex flex-col gap-3 md:gap-4 items-start pt-2 md:pt-4">
+            <button
+              onClick={onContactClick}
+              className="px-6 py-2.5 md:px-8 md:py-3 bg-white text-primary-700 hover:bg-slate-100 transition-colors rounded-sm font-medium text-sm md:text-base"
+            >
+              {t.contact}
+            </button>
+
+            <a href="mailto:asztulman@moliere-avocats.fr" className="flex items-center gap-2 text-sm text-white/90 hover:text-white transition-colors">
+              <Mail size={16} />
+              <span>asztulman@moliere-avocats.fr</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

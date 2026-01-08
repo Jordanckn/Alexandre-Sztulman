@@ -45,16 +45,16 @@ export function Expertise({ language }: ExpertiseProps) {
   const t = content[language];
 
   return (
-    <section id="expertise" className="py-24 bg-slate-50">
+    <section id="expertise" className="py-16 md:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-serif text-primary-900 mb-6">{t.title}</h2>
-        <div className="h-1 w-20 bg-primary-700 mb-16"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-primary-900 mb-4 md:mb-6">{t.title}</h2>
+        <div className="h-1 w-16 md:w-20 bg-primary-700 mb-12 md:mb-16"></div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {t.areas.map((area, index) => (
-            <div key={index} className="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow border-t-4 border-primary-700">
-              <h3 className="text-xl font-semibold text-primary-900 mb-4">{area.title}</h3>
-              <p className="text-slate-600 leading-relaxed whitespace-pre-line">{area.description}</p>
+            <div key={index} className="bg-white p-6 md:p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow border-t-4 border-primary-700">
+              <h3 className="text-lg md:text-xl font-semibold text-primary-900 mb-3 md:mb-4">{area.title}</h3>
+              <p className="text-sm md:text-base text-slate-600 leading-relaxed whitespace-pre-line">{area.description}</p>
             </div>
           ))}
         </div>

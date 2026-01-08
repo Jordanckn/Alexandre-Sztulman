@@ -105,29 +105,29 @@ export function FAQ({ language }: FAQProps) {
   const t = content[language];
 
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section id="faq" className="py-16 md:py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-serif text-primary-900 mb-6">{t.title}</h2>
-        <div className="h-1 w-20 bg-primary-700 mb-12"></div>
+        <h2 className="text-3xl md:text-4xl font-serif text-primary-900 mb-4 md:mb-6">{t.title}</h2>
+        <div className="h-1 w-16 md:w-20 bg-primary-700 mb-8 md:mb-12"></div>
 
         <div className="space-y-3">
           {t.faqs.map((faq, index) => (
             <div key={index} className="border border-slate-200 rounded-sm">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors text-left"
+                className="w-full px-4 py-3 md:px-6 md:py-4 flex items-center justify-between hover:bg-slate-50 transition-colors text-left"
               >
-                <span className="font-medium text-primary-900 text-lg">{faq.question}</span>
+                <span className="font-medium text-primary-900 text-base md:text-lg">{faq.question}</span>
                 <ChevronDown
                   size={20}
-                  className={`text-primary-700 flex-shrink-0 ml-4 transition-transform duration-300 ${
+                  className={`text-primary-700 flex-shrink-0 ml-3 md:ml-4 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
               {openIndex === index && (
-                <div className="px-6 py-4 border-t border-slate-200 bg-slate-50">
-                  <p className="text-slate-700 leading-relaxed">{faq.answer}</p>
+                <div className="px-4 py-3 md:px-6 md:py-4 border-t border-slate-200 bg-slate-50">
+                  <p className="text-sm md:text-base text-slate-700 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
