@@ -1,4 +1,3 @@
-import { Mail } from 'lucide-react';
 import { Language } from '../types';
 import heroImage from '../assets/pexels-maria-20711682-11001707.webp';
 
@@ -41,13 +40,13 @@ export function Hero({ language, onContactClick }: HeroProps) {
       <div className="w-full md:w-1/2 bg-primary-700 flex items-center md:order-1">
         <div className="px-6 py-12 md:px-12 md:py-20 space-y-6 md:space-y-8 w-full">
           <div>
-            <h1 className="text-4xl md:text-6xl font-serif text-white mb-2 md:mb-3">{t.name}</h1>
-            <p className="text-xl md:text-2xl text-white/95 font-medium">{t.title}</p>
+            <h1 className="text-3xl md:text-6xl font-serif text-white mb-2 md:mb-3 leading-tight">{t.name}</h1>
+            <p className="text-lg md:text-2xl text-white/95 font-medium">{t.title}</p>
           </div>
 
           <div className="h-px bg-white/40 w-16 md:w-24"></div>
 
-          <p className="text-base md:text-lg text-white/90 leading-relaxed">{t.tagline}</p>
+          <p className="text-sm md:text-lg text-white/90 leading-relaxed">{t.tagline}</p>
 
           <div className="flex flex-col gap-3 md:gap-4 items-start pt-2 md:pt-4">
             <button
@@ -56,11 +55,6 @@ export function Hero({ language, onContactClick }: HeroProps) {
             >
               {t.contact}
             </button>
-
-            <a href="mailto:asztulman@moliere-avocats.fr" className="flex items-center gap-2 text-sm text-white/90 hover:text-white transition-colors">
-              <Mail size={16} />
-              <span>asztulman@moliere-avocats.fr</span>
-            </a>
           </div>
         </div>
       </div>
