@@ -10,17 +10,17 @@ export function Publications({ language }: PublicationsProps) {
     fr: {
       title: 'Publications & Actualités',
       bookTitle: 'EU Sanctions Litigation: Fundamental Rights and International Security',
-      bookDescription: 'Cet ouvrage de 256 pages, publié chez Routledge en 2025, est l\'aboutissement de la thèse de doctorat de Maître Sztulman. Il offre un éclairage unique sur les litiges de sanctions internationales au niveau européen, analysant en profondeur le contrôle juridictionnel des sanctions européennes et l\'équilibre entre sécurité internationale et libertés fondamentales.',
+      bookDescription: 'Ouvrage de référence publié chez Routledge en 2025, il propose une analyse approfondie du contentieux des sanctions internationales au niveau de l’Union européenne, en examinant le contrôle juridictionnel des mesures restrictives et l’articulation entre impératifs de sécurité internationale et protection des libertés fondamentales.',
       publisher: 'Routledge, 2025',
       pages: '256 pages',
       buyButton: 'En savoir plus',
       teachingTitle: 'Enseignement',
-      teachingText: 'Maître Sztulman enseigne le droit des sanctions internationales à l\'Université Paris 1 Panthéon-Sorbonne (Master 2 Droit pénal international et des affaires), apportant à ses étudiants une expertise pratique et théorique dans ce domaine en constante évolution.'
+      teachingText: 'Maître Sztulman enseigne le droit des sanctions internationales à l\'Université Paris 1 Panthéon-Sorbonne, apportant à ses étudiants une expertise pratique et théorique dans ce domaine en constante évolution.'
     },
     en: {
       title: 'Publications & News',
       bookTitle: 'EU Sanctions Litigation: Fundamental Rights and International Security',
-      bookDescription: 'This 256-page work, published by Routledge in 2025, is the culmination of Me Sztulman\'s doctoral thesis. It offers a unique perspective on international sanctions litigation at the European level, providing in-depth analysis of judicial review of European sanctions and the balance between international security and fundamental freedoms.',
+      bookDescription: 'A reference work published by Routledge in 2025, it offers an in-depth analysis of international sanctions litigation at the European Union level, examining judicial review of restrictive measures and the interplay between international security imperatives and the protection of fundamental freedoms.',
       publisher: 'Routledge, 2025',
       pages: '256 pages',
       buyButton: 'Learn more',

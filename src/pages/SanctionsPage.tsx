@@ -9,15 +9,15 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
   const content = {
     fr: {
       title: 'Sanctions Internationales de l\'UE',
-      subtitle: 'Expertise de pointe en contentieux des mesures restrictives européennes',
-      intro: 'Le cabinet accompagne les entreprises, institutions financières et particuliers confrontés aux régimes de sanctions de l\'Union européenne. Avec une expertise académique et pratique unique, Maître Sztulman offre un conseil stratégique et une représentation contentieuse de premier plan.',
+      subtitle: 'Expertise en contentieux des mesures restrictives européennes',
+      intro: 'Le cabinet accompagne les entreprises, institutions financières et particuliers confrontés aux régimes de sanctions de l’Union européenne, tant en phase de conformité que dans le cadre de procédures contentieuses complexes. S’appuyant sur son expertise académique et sa pratique du contentieux, Maître Sztulman assure un conseil juridique et une représentation contentieuse, en tenant compte des enjeux économiques et institutionnels propres à chaque dossier.',
       services: {
         title: 'Nos services',
         items: [
           {
             icon: Scale,
             title: 'Contentieux devant les juridictions européennes',
-            description: 'Représentation devant le Tribunal de l\'Union européenne et la Cour de justice pour contester l\'inscription sur les listes de sanctions, obtenir la radiation ou des dommages-intérêts.'
+            description: 'Représentation devant le Tribunal de l\'Union européenne et la Cour de justice pour contester l\'inscription sur les listes de sanctions, obtenir la radiation et réparation.'
           },
           {
             icon: FileText,
@@ -27,12 +27,12 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
           {
             icon: Shield,
             title: 'Gestion de crise',
-            description: 'Assistance immédiate en cas de gel d\'avoirs, conseil stratégique sur les démarches à entreprendre, coordination avec les autorités compétentes.'
+            description: 'Assistance immédiate en cas de gel d\'avoirs, conseil stratégique sur les démarches à entreprendre, coordination avec les autorités nationales compétentes.'
           },
           {
             icon: Users,
             title: 'Licences et dérogations',
-            description: 'Demandes d\'autorisations spécifiques auprès des autorités nationales et européennes pour débloquer des fonds gelés ou réaliser des opérations interdites.'
+            description: 'Assistance dans la préparation et le dépôt de demandes d’autorisation (licences/dérogations) auprès des autorités nationales et européennes compétentes afin d’obtenir le déblocage de fonds gelés ou la réalisation d’opérations soumises à restriction. Prise en charge des autorisations de transaction et des formalités de notification liées aux régimes de sanctions.'
           }
         ]
       },
@@ -40,13 +40,13 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
         title: 'Domaines d\'intervention',
         description: 'Le cabinet intervient dans tous les aspects du droit des sanctions internationales',
         areas: [
-          'Sanctions territoriales (Russie, Iran, Syrie, etc.)',
+          'Sanctions territoriales',
           'Sanctions individuelles (gel d\'avoirs, interdictions de voyage)',
           'Embargos sectoriels (énergie, défense, finance)',
           'Contrôle des exportations de biens à double usage',
-          'Violations et sanctions pénales',
+          'Violation et contournement des sanctions de l\'Union européenne et infractions pénales',
           'Protection des droits fondamentaux',
-          'Contentieux en indemnisation',
+          'Contentieux en réparation',
           'Coopération avec les autorités de supervision'
         ]
       },
@@ -55,19 +55,26 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
         reasons: [
           {
             title: 'Expertise académique reconnue',
-            text: 'Auteur du livre de référence "EU Sanctions Litigation" (Routledge, 2025) et enseignant à la Sorbonne en droit des sanctions.'
+            text: (
+              <>
+                Auteur d’une thèse sur le contrôle juridictionnel des mesures restrictives en droit de l'Union européenne.
+                Auteur de l’ouvrage de référence : <a href="https://www.routledge.com/EU-Sanctions-Litigation-Fundamental-Rights-and-International-Security/Sztulman/p/book/9781041019411" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">EU Sanctions Litigation : Fundamental Rights and International Security</a>.
+                Enseignant à l’<a href="https://www.pantheonsorbonne.fr/" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">Université Paris 1 Panthéon Sorbonne</a> en droit des sanctions.
+                Chercheur invité à l’<a href="https://www.nyu.edu/" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">Université de New York</a>.
+              </>
+            )
           },
           {
             title: 'Expérience internationale',
-            text: 'Formation en France, au Luxembourg et en Russie, compréhension approfondie des enjeux géopolitiques.'
+            text: 'Formation en France, au Luxembourg et en Russie, complétée par une expérience au sein de la Cour de justice de l’Union européenne, en cabinets d’affaires internationaux et auprès de la direction générale du Trésor du ministère de l’Économie. Compréhension concrète des enjeux juridiques et géopolitiques, au service de la sécurisation des opérations et de la conformité dans des environnements réglementaires complexes.'
           },
           {
             title: 'Approche sur-mesure',
-            text: 'Stratégie contentieuse adaptée à chaque situation, défense rigoureuse des droits fondamentaux.'
+            text: 'Mise en œuvre de stratégies contentieuses et de défense adaptées aux contraintes institutionnelles, en droit pénal, droit européen et libertés fondamentales. Intervention menée avec une discrétion constante à toutes les étapes, en phases précontentieuse comme contentieuse, notamment dans les dossiers sensibles et à forts enjeux. Accompagnement en conseil et en contentieux devant les juridictions nationales et européennes, en matière de protection des droits et libertés fondamentaux et de conformité aux régimes de sanctions européennes.'
           },
           {
             title: 'Réactivité',
-            text: 'Disponibilité immédiate en cas d\'urgence, réponse rapide aux demandes de conseil.'
+            text: 'Disponibilité en cas d’urgence et traitement prioritaire des situations critiques. Réponse rapide aux demandes de conseil, avec une intervention menée avec discrétion et confidentialité à chaque étape.'
           }
         ]
       }
@@ -75,14 +82,14 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
     en: {
       title: 'EU International Sanctions',
       subtitle: 'Leading expertise in EU restrictive measures litigation',
-      intro: 'The firm assists companies, financial institutions and individuals facing EU sanctions regimes. With unique academic and practical expertise, Me Sztulman provides strategic counsel and top-tier litigation representation.',
+      intro: 'The firm assists companies, financial institutions and individuals facing EU sanctions regimes, both in the compliance phase and in the context of complex litigation proceedings. Drawing on his academic expertise and litigation practice, Me Sztulman provides legal counsel and litigation representation, taking into account the economic and institutional challenges specific to each case.',
       services: {
         title: 'Our Services',
         items: [
           {
             icon: Scale,
             title: 'Litigation before EU Courts',
-            description: 'Representation before the General Court and Court of Justice of the EU to challenge listing decisions, obtain delisting or damages.'
+            description: 'Representation before the General Court and Court of Justice of the EU to challenge listing decisions, obtain delisting and compensation.'
           },
           {
             icon: FileText,
@@ -97,7 +104,7 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
           {
             icon: Users,
             title: 'Licenses and Derogations',
-            description: 'Applications for specific authorizations from national and EU authorities to unfreeze funds or conduct prohibited operations.'
+            description: 'Assistance in the preparation and filing of authorization requests (licenses/derogations) with national and European authorities to unfreeze funds or conduct restricted operations. Handling of transaction authorizations and notification formalities related to sanctions regimes.'
           }
         ]
       },
@@ -105,11 +112,11 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
         title: 'Areas of Intervention',
         description: 'The firm handles all aspects of international sanctions law',
         areas: [
-          'Territorial sanctions (Russia, Iran, Syria, etc.)',
+          'Territorial sanctions',
           'Individual sanctions (asset freezes, travel bans)',
           'Sectoral embargoes (energy, defense, finance)',
           'Dual-use goods export controls',
-          'Violations and criminal sanctions',
+          'Violation and circumvention of EU sanctions and criminal offenses',
           'Protection of fundamental rights',
           'Compensation litigation',
           'Cooperation with supervisory authorities'
@@ -120,19 +127,26 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
         reasons: [
           {
             title: 'Recognized Academic Expertise',
-            text: 'Author of the reference book "EU Sanctions Litigation" (Routledge, 2025) and professor at the Sorbonne in sanctions law.'
+            text: (
+              <>
+                Author of a thesis on the judicial review of restrictive measures in EU law.
+                Author of the reference book: <a href="https://www.routledge.com/EU-Sanctions-Litigation-Fundamental-Rights-and-International-Security/Sztulman/p/book/9781041019411" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">EU Sanctions Litigation : Fundamental Rights and International Security</a>.
+                Lecturer at <a href="https://www.pantheonsorbonne.fr/" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">Paris 1 Panthéon Sorbonne University</a> in sanctions law.
+                Visiting researcher at <a href="https://www.nyu.edu/" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">New York University</a>.
+              </>
+            )
           },
           {
             title: 'International Experience',
-            text: 'Trained in France, Luxembourg and Russia, with deep understanding of geopolitical issues.'
+            text: 'Trained in France, Luxembourg and Russia, complemented by experience at the Court of Justice of the European Union, in international law firms and at the French Treasury (direction générale du Trésor) of the Ministry of Economy. Concrete understanding of legal and geopolitical issues, serving to secure operations and ensure compliance in complex regulatory environments.'
           },
           {
             title: 'Tailored Approach',
-            text: 'Litigation strategy adapted to each situation, rigorous defense of fundamental rights.'
+            text: 'Implementation of litigation and defense strategies adapted to institutional constraints, in criminal law, European law and fundamental rights. Intervention conducted with constant discretion throughout all stages, both pre-litigation and litigation, particularly in sensitive cases with high institutional stakes. Support in advisory and litigation before national and European courts, regarding the protection of fundamental rights and freedoms and compliance with European sanctions regimes.'
           },
           {
             title: 'Responsiveness',
-            text: 'Immediate availability in case of emergency, rapid response to advisory requests.'
+            text: 'Availability in case of emergency and priority handling of critical situations. Rapid response to advisory requests, with intervention conducted with discretion and confidentiality at every stage.'
           }
         ]
       }
@@ -143,7 +157,7 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
 
   return (
     <div className="pt-20">
-      <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-20">
+      <section className="bg-primary-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-6">
             <Shield size={48} />
@@ -191,7 +205,7 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
           <h2 className="text-3xl font-serif text-slate-900 mb-12">{t.why.title}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {t.why.reasons.map((reason, index) => (
-              <div key={index} className="border-l-4 border-slate-800 pl-6">
+              <div key={index} className="border-l-4 border-primary-700 pl-6">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">{reason.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{reason.text}</p>
               </div>

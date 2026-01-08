@@ -8,31 +8,31 @@ interface InvestmentDisputesPageProps {
 export function InvestmentDisputesPage({ language }: InvestmentDisputesPageProps) {
   const content = {
     fr: {
-      title: 'Contentieux International des Investissements',
-      subtitle: 'Arbitrage investisseur-État et protection des investissements transfrontaliers',
-      intro: 'Le cabinet conseille et représente les investisseurs dans leurs différends avec les États, ainsi que dans les litiges d\'arbitrage commercial international liés aux investissements. Une expertise reconnue en droit international des investissements.',
+      title: 'Droit des investissements internationaux',
+      subtitle: 'Accompagnement juridique des investissements et opérations internationales',
+      intro: 'Le cabinet assiste entreprises et investisseurs dans la structuration et la sécurisation de leurs opérations à l’international. Il intervient sur les projets à forts enjeux (implantations, partenariats stratégiques, acquisitions, financements), en intégrant les contraintes réglementaires, contractuelles et géopolitiques. En cas de difficulté, il accompagne la gestion des différends et des situations de crise, avec une approche stratégique, pragmatique et conduite avec une discrétion constante.',
       services: {
         title: 'Nos services',
         items: [
           {
-            icon: Scale,
-            title: 'Arbitrage investisseur-État (ISDS)',
-            description: 'Représentation dans les arbitrages CIRDI, CNUDCI et autres instances, fondés sur des traités bilatéraux d\'investissement (TBI) ou le Traité sur la Charte de l\'énergie.'
+            icon: TrendingUp,
+            title: 'Structuration d’investissements internationaux',
+            description: 'Structuration juridique des projets transfrontaliers (implantation, acquisition, partenariat, financement). Sécurisation des schémas d’investissement et des actes clés, avec une approche orientée exécution.'
           },
           {
             icon: Globe2,
-            title: 'Conseil stratégique pré-contentieux',
-            description: 'Analyse de la protection offerte par les TBI, structuration des investissements, évaluation des risques politiques et juridiques, négociations avec les États.'
+            title: 'Conseil stratégique et gestion des risques',
+            description: 'Analyse des risques juridiques, réglementaires et géopolitiques (autorités, licences, conformité, sanctions, partenaires). Définition de stratégies de prévention et de sécurisation adaptées aux enjeux du projet.'
           },
           {
             icon: FileText,
-            title: 'Arbitrage commercial international',
-            description: 'Représentation dans les arbitrages CCI, LCIA, Swiss Arbitration concernant des litiges d\'investissement, joint-ventures, contrats de construction et d\'approvisionnement.'
+            title: 'Contrats internationaux et partenariats',
+            description: 'Négociation et rédaction des contrats structurants : joint-ventures, distribution, approvisionnement, construction, prestations. Mise en place de mécanismes de gouvernance, de sortie et de protection des intérêts.'
           },
           {
-            icon: TrendingUp,
-            title: 'Contentieux post-arbitral',
-            description: 'Reconnaissance et exécution des sentences arbitrales, annulation et révision, procédures devant les juridictions nationales.'
+            icon: Scale,
+            title: 'Différends transfrontaliers',
+            description: 'Assistance en cas de difficulté : négociation, précontentieux et contentieux devant les juridictions compétentes. Coordination des actions en France et à l’étranger, avec une gestion rigoureuse et discrète.'
           }
         ]
       },
@@ -40,78 +40,64 @@ export function InvestmentDisputesPage({ language }: InvestmentDisputesPageProps
         title: 'Domaines d\'intervention',
         description: 'Une couverture complète des contentieux internationaux d\'investissement',
         areas: [
-          'Traités bilatéraux d\'investissement (TBI)',
-          'Traité sur la Charte de l\'énergie',
-          'Expropriation directe et indirecte',
-          'Traitement juste et équitable (TJE)',
-          'Protection contre la discrimination',
-          'Clause de la nation la plus favorisée',
-          'Transferts de capitaux et rapatriement',
-          'Standards de protection CIRDI/CNUDCI'
-        ]
-      },
-      sectors: {
-        title: 'Secteurs d\'activité',
-        description: 'Intervention dans tous les secteurs économiques stratégiques',
-        list: [
-          'Énergie et ressources naturelles',
-          'Infrastructure et construction',
-          'Télécommunications',
-          'Banque et finance',
-          'Industrie manufacturière',
-          'Immobilier et tourisme',
-          'Technologies et innovation',
-          'Transports et logistique'
+          'Protection de l’investissement et risque souverain',
+          'Décisions administratives et autorisations',
+          'Atteintes à l’investissement et expropriation',
+          'Égalité de traitement et non-discrimination',
+          'Transferts de capitaux et rapatriement des fonds',
+          'Contrats publics, concessions et partenariats',
+          'Précontentieux et règlement amiable',
+          'Contentieux transfrontaliers et exécution'
         ]
       },
       why: {
         title: 'Pourquoi nous choisir',
         reasons: [
           {
-            title: 'Expertise académique et pratique',
-            text: 'Formation internationale pointue (Luxembourg, Moscou) et recherches doctorales sur les interactions entre droit des investissements et sécurité internationale.'
+            title: 'Expertise nationale et internationale',
+            text: 'Expérience au croisement du droit français et du droit de l’Union, acquise auprès d’institutions européennes, d’autorités françaises et en cabinets d’affaires internationaux. Capacité à piloter des dossiers transfrontaliers complexes.'
           },
           {
-            title: 'Compréhension géopolitique',
-            text: 'Analyse fine des enjeux politiques et économiques, anticipation des risques souverains, stratégie adaptée au contexte régional.'
+            title: 'Lecture géopolitique et réglementaire',
+            text: 'Analyse fine des risques souverains, réglementaires et de réputation. Anticipation des contraintes liées aux environnements sensibles et aux cadres de conformité applicables.'
           },
           {
-            title: 'Réseau international',
-            text: 'Collaboration avec des correspondants dans toutes les grandes juridictions, coordination d\'équipes multidisciplinaires et multilingues.'
+            title: 'Stratégie sur-mesure',
+            text: 'Construction de stratégies adaptées aux objectifs du client et aux contraintes opérationnelles : prévention, négociation, précontentieux et contentieux. Approche pragmatique et orientée résultat.'
           },
           {
-            title: 'Approche sur-mesure',
-            text: 'Stratégie contentieuse personnalisée, analyse coûts-bénéfices, recherche de solutions négociées quand pertinent.'
+            title: 'Discrétion et réactivité',
+            text: 'Intervention menée avec une discrétion constante, notamment dans les dossiers à forts enjeux. Disponibilité et traitement prioritaire des urgences, avec un suivi direct et personnalisé.'
           }
         ]
       }
     },
     en: {
-      title: 'International Investment Disputes',
-      subtitle: 'Investor-State arbitration and cross-border investment protection',
-      intro: 'The firm advises and represents investors in their disputes with States, as well as in international commercial arbitration related to investments. Recognized expertise in international investment law.',
+      title: 'International Investment Law',
+      subtitle: 'Legal support for international investments and operations',
+      intro: 'The firm assists companies and investors in structuring and securing their international operations. It handles high-stakes projects (establishments, strategic partnerships, acquisitions, financing), integrating regulatory, contractual, and geopolitical constraints. In case of difficulties, it provides support in dispute and crisis management, with a strategic and pragmatic approach conducted with constant discretion.',
       services: {
         title: 'Our Services',
         items: [
           {
-            icon: Scale,
-            title: 'Investor-State Dispute Settlement (ISDS)',
-            description: 'Representation in ICSID, UNCITRAL and other arbitrations, based on bilateral investment treaties (BITs) or the Energy Charter Treaty.'
+            icon: TrendingUp,
+            title: 'International Investment Structuring',
+            description: 'Legal structuring of cross-border projects (establishment, acquisition, partnership, financing). Securing investment schemes and key acts, with an execution-oriented approach.'
           },
           {
             icon: Globe2,
-            title: 'Pre-Dispute Strategic Advice',
-            description: 'Analysis of BIT protection, investment structuring, assessment of political and legal risks, negotiations with States.'
+            title: 'Strategic Advisory and Risk Management',
+            description: 'Analysis of legal, regulatory, and geopolitical risks (authorities, licenses, compliance, sanctions, partners). Defining prevention and security strategies adapted to project stakes.'
           },
           {
             icon: FileText,
-            title: 'International Commercial Arbitration',
-            description: 'Representation in ICC, LCIA, Swiss Arbitration proceedings concerning investment disputes, joint ventures, construction and supply contracts.'
+            title: 'International Contracts and Partnerships',
+            description: 'Negotiation and drafting of core contracts: joint ventures, distribution, supply, construction, services. Implementation of governance, exit, and interest protection mechanisms.'
           },
           {
-            icon: TrendingUp,
-            title: 'Post-Award Proceedings',
-            description: 'Recognition and enforcement of arbitral awards, annulment and revision, proceedings before national courts.'
+            icon: Scale,
+            title: 'Cross-border Disputes',
+            description: 'Assistance in case of difficulties: negotiation, pre-litigation, and litigation before competent courts. Coordination of actions in France and abroad, with rigorous and discreet management.'
           }
         ]
       },
@@ -119,48 +105,34 @@ export function InvestmentDisputesPage({ language }: InvestmentDisputesPageProps
         title: 'Areas of Intervention',
         description: 'Comprehensive coverage of international investment disputes',
         areas: [
-          'Bilateral Investment Treaties (BITs)',
-          'Energy Charter Treaty',
-          'Direct and indirect expropriation',
-          'Fair and Equitable Treatment (FET)',
-          'Protection against discrimination',
-          'Most Favored Nation clause',
-          'Capital transfers and repatriation',
-          'ICSID/UNCITRAL protection standards'
-        ]
-      },
-      sectors: {
-        title: 'Industry Sectors',
-        description: 'Intervention in all strategic economic sectors',
-        list: [
-          'Energy and natural resources',
-          'Infrastructure and construction',
-          'Telecommunications',
-          'Banking and finance',
-          'Manufacturing',
-          'Real estate and tourism',
-          'Technology and innovation',
-          'Transport and logistics'
+          'Investment protection and sovereign risk',
+          'Administrative decisions and authorizations',
+          'Investment breaches and expropriation',
+          'Equal treatment and non-discrimination',
+          'Capital transfers and fund repatriation',
+          'Public contracts, concessions and partnerships',
+          'Pre-litigation and amicable settlement',
+          'Cross-border litigation and enforcement'
         ]
       },
       why: {
         title: 'Why Choose Us',
         reasons: [
           {
-            title: 'Academic and Practical Expertise',
-            text: 'Advanced international training (Luxembourg, Moscow) and doctoral research on interactions between investment law and international security.'
+            title: 'National and International Expertise',
+            text: 'Experience at the intersection of French and EU law, gained from European institutions, French authorities, and international business law firms. Ability to manage complex cross-border cases.'
           },
           {
-            title: 'Geopolitical Understanding',
-            text: 'Refined analysis of political and economic issues, anticipation of sovereign risks, strategy adapted to regional context.'
+            title: 'Geopolitical and Regulatory Insight',
+            text: 'Fine analysis of sovereign, regulatory, and reputational risks. Anticipation of constraints related to sensitive environments and applicable compliance frameworks.'
           },
           {
-            title: 'International Network',
-            text: 'Collaboration with correspondents in all major jurisdictions, coordination of multidisciplinary and multilingual teams.'
+            title: 'Tailored Strategy',
+            text: 'Construction of strategies adapted to client objectives and operational constraints: prevention, negotiation, pre-litigation, and litigation. Pragmatic and result-oriented approach.'
           },
           {
-            title: 'Tailored Approach',
-            text: 'Personalized litigation strategy, cost-benefit analysis, pursuit of negotiated solutions when relevant.'
+            title: 'Discretion and Responsiveness',
+            text: 'Intervention conducted with constant discretion, especially in high-stakes cases. Availability and priority handling of emergencies, with direct and personalized follow-up.'
           }
         ]
       }
@@ -171,7 +143,7 @@ export function InvestmentDisputesPage({ language }: InvestmentDisputesPageProps
 
   return (
     <div className="pt-20">
-      <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-20">
+      <section className="bg-primary-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-6">
             <Scale size={48} />
@@ -216,24 +188,10 @@ export function InvestmentDisputesPage({ language }: InvestmentDisputesPageProps
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-slate-900 mb-4">{t.sectors.title}</h2>
-          <p className="text-slate-600 mb-8">{t.sectors.description}</p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {t.sectors.list.map((sector, index) => (
-              <div key={index} className="bg-slate-50 p-6 rounded-sm border-l-4 border-slate-800">
-                <p className="text-slate-700 font-medium">{sector}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-serif text-slate-900 mb-12">{t.why.title}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {t.why.reasons.map((reason, index) => (
-              <div key={index} className="border-l-4 border-slate-800 pl-6 bg-white p-6 rounded-sm">
+              <div key={index} className="border-l-4 border-primary-700 pl-6 bg-white p-6 rounded-sm">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">{reason.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{reason.text}</p>
               </div>

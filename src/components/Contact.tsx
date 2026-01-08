@@ -133,11 +133,16 @@ export function Contact({ language }: ContactProps) {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{t.address}</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <a
+                    href="https://www.google.com/maps/place/22+Av.+Franklin+Delano+Roosevelt,+75008+Paris/@48.8719455,2.3077161,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66fc5df4a15f3:0x250c4ac77930306!8m2!3d48.8719455!4d2.310291!16s%2Fg%2F11nnkqyd14?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-600 hover:text-primary-700 transition-colors leading-relaxed block"
+                  >
                     22 avenue Franklin D. Roosevelt<br />
                     75008 Paris<br />
                     France
-                  </p>
+                  </a>
                 </div>
               </div>
 

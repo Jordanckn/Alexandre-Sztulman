@@ -13,7 +13,7 @@ export function Footer({ language }: FooterProps) {
       about: 'Le Cabinet',
       sanctions: 'Sanctions Internationales',
       business: 'Droit Pénal des Affaires',
-      investments: 'Droit des Investissements',
+      investments: 'Droit des investissements internationaux',
       blog: 'Publications',
       contact: 'Contact',
       sitemap: 'Plan du site',
@@ -24,7 +24,7 @@ export function Footer({ language }: FooterProps) {
       address: '22 avenue Franklin D. Roosevelt',
       city: '75008 Paris',
       phone: '+33 6 59 41 09 15',
-      email: 'contact@sztulman-avocat.com',
+      email: 'asztulman@moliere-avocats.fr',
       copyright: '© 2024 Maître Alexandre Sztulman. Tous droits réservés.',
       credit: 'Site réalisé par'
     },
@@ -44,7 +44,7 @@ export function Footer({ language }: FooterProps) {
       address: '22 avenue Franklin D. Roosevelt',
       city: '75008 Paris',
       phone: '+33 6 59 41 09 15',
-      email: 'contact@sztulman-avocat.com',
+      email: 'asztulman@moliere-avocats.fr',
       copyright: '© 2024 Alexandre Sztulman. All rights reserved.',
       credit: 'Website by'
     }
@@ -65,8 +65,15 @@ export function Footer({ language }: FooterProps) {
                 Avocat au Barreau de Paris
               </span>
             </Link>
-            <p className="text-sm text-white/80 mt-2">{t.address}</p>
-            <p className="text-sm text-white/80">{t.city}</p>
+            <a
+              href="https://www.google.com/maps/place/22+Av.+Franklin+Delano+Roosevelt,+75008+Paris/@48.8719455,2.3077161,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66fc5df4a15f3:0x250c4ac77930306!8m2!3d48.8719455!4d2.310291!16s%2Fg%2F11nnkqyd14?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity underline decoration-white/30 underline-offset-4"
+            >
+              <p className="text-sm text-white/80 mt-2">{t.address}</p>
+              <p className="text-sm text-white/80">{t.city}</p>
+            </a>
             <div className="flex gap-3 mt-4">
               <a
                 href="https://linkedin.com"
@@ -78,7 +85,7 @@ export function Footer({ language }: FooterProps) {
                 <Linkedin size={18} />
               </a>
               <a
-                href="mailto:contact@sztulman-avocat.com"
+                href="mailto:asztulman@moliere-avocats.fr"
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-sm transition-colors"
                 aria-label="Email"
               >
@@ -132,7 +139,7 @@ export function Footer({ language }: FooterProps) {
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@sztulman-avocat.com" className="text-white/80 hover:text-white transition-colors">
+                <a href="mailto:asztulman@moliere-avocats.fr" className="text-white/80 hover:text-white transition-colors">
                   {t.email}
                 </a>
               </li>

@@ -1,4 +1,4 @@
-import { Briefcase, Shield, FileSearch, AlertTriangle } from 'lucide-react';
+import { Briefcase, Shield, AlertTriangle, Gavel, Scale } from 'lucide-react';
 import { Language } from '../types';
 
 interface BusinessCriminalPageProps {
@@ -8,31 +8,31 @@ interface BusinessCriminalPageProps {
 export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
   const content = {
     fr: {
-      title: 'Droit Pénal des Affaires & Compliance',
-      subtitle: 'Défense et conseil en droit pénal économique et programmes de conformité',
-      intro: 'Le cabinet intervient dans la défense des dirigeants et entreprises confrontés à des poursuites pénales, ainsi qu\'en matière de prévention et de conformité. Une approche globale combinant expertise juridique et compréhension des enjeux business.',
+      title: 'Droit Pénal des Affaires',
+      subtitle: 'Défense et conseil en droit pénal des affaires',
+      intro: 'Le cabinet accompagne dirigeants, cadres et entreprises confrontés à des problématiques de droit pénal économique et financier. Il intervient à tous les stades du dossier, pour anticiper, maîtriser et défendre votre responsabilité pénale. L’approche stratégique et pragmatique, allie expertise juridique et compréhension des enjeux de l’entreprise, avec une attention constante à la confidentialité et à la discrétion.',
       services: {
         title: 'Nos services',
         items: [
           {
             icon: Shield,
-            title: 'Défense pénale des entreprises',
-            description: 'Représentation des personnes morales et de leurs dirigeants dans les affaires de corruption, fraude, abus de biens sociaux, délit d\'initié, manipulation de marché.'
+            title: 'Défense pénale des dirigeants et entreprises',
+            description: 'Défense en droit pénal des affaires, dès les premiers actes d’enquête et jusqu’à l’audience. Pilotage du dossier, protection des intérêts et de la réputation, en toute confidentialité.'
           },
           {
-            icon: FileSearch,
-            title: 'Lutte anti-blanchiment (LCB-FT)',
-            description: 'Conseil sur les obligations AML/CFT, mise en place de dispositifs de vigilance, formation des équipes, assistance lors de contrôles TRACFIN/ACPR.'
-          },
-          {
-            icon: Briefcase,
-            title: 'Programmes de compliance',
-            description: 'Conception et implémentation de programmes de conformité anticorruption (Loi Sapin II), cartographie des risques, formation des collaborateurs.'
+            icon: Gavel,
+            title: 'Auditions, perquisitions, garde à vue',
+            description: 'Assistance immédiate en situation d’urgence : auditions, perquisitions, convocations, garde à vue. Préparation, présence, sécurisation des droits de la défense, avec discrétion constante.'
           },
           {
             icon: AlertTriangle,
             title: 'Gestion de crise et enquêtes internes',
-            description: 'Accompagnement lors de perquisitions, auditions, mise en place d\'enquêtes internes, conseil stratégique en phase d\'investigation.'
+            description: 'Accompagnement dans les dossiers sensibles : organisation d’enquêtes internes, préservation des preuves, coordination de la stratégie. Objectif : reprendre le contrôle, limiter le risque, sécuriser la suite.'
+          },
+          {
+            icon: Scale,
+            title: 'Victimes – constitution de partie civile',
+            description: 'Assistance des victimes d’infraction pénale : dépôt de plainte, constitution de partie civile et réparation du préjudice. Stratégie probatoire et suivi de procédure jusqu’à l’indemnisation.'
           }
         ]
       },
@@ -46,8 +46,8 @@ export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
           'Blanchiment de capitaux',
           'Financement du terrorisme',
           'Délit d\'initié et abus de marché',
-          'Contrefaçon et propriété intellectuelle',
-          'Droit pénal du travail et environnemental'
+          'Contournement des sanctions internationales',
+          'Droit pénal du travail'
         ]
       },
       approach: {
@@ -77,7 +77,7 @@ export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
         reasons: [
           {
             title: 'Double expertise nationale et internationale',
-            text: 'Maîtrise du droit français et des standards internationaux (FCPA, UK Bribery Act, conventions OCDE).'
+            text: 'Double expertise nationale et internationale, avec une pratique du contentieux et du conseil en droit français, européen et en contexte international.'
           },
           {
             title: 'Approche business-oriented',
@@ -95,31 +95,31 @@ export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
       }
     },
     en: {
-      title: 'Business Criminal Law & Compliance',
-      subtitle: 'Defense and advisory in white-collar crime and compliance programs',
-      intro: 'The firm represents executives and companies facing criminal proceedings, and advises on prevention and compliance matters. A comprehensive approach combining legal expertise and business understanding.',
+      title: 'Business Criminal Law',
+      subtitle: 'Defense and advisory in business criminal law',
+      intro: 'The firm supports executives, managers, and companies facing economic and financial criminal law issues. It intervenes at all stages of the case to anticipate, manage, and defend your criminal liability. Our strategic and pragmatic approach combines legal expertise with an understanding of corporate stakes, with constant attention to confidentiality and discretion.',
       services: {
         title: 'Our Services',
         items: [
           {
             icon: Shield,
-            title: 'Corporate Criminal Defense',
-            description: 'Representation of corporations and their executives in corruption, fraud, misuse of corporate assets, insider trading, and market manipulation cases.'
+            title: 'Criminal defense for executives and companies',
+            description: 'Defense in business criminal law, from the initial investigative acts to the hearing. Management of the case, protection of interests and reputation, with full confidentiality.'
           },
           {
-            icon: FileSearch,
-            title: 'Anti-Money Laundering (AML/CFT)',
-            description: 'Advice on AML/CFT obligations, implementation of due diligence systems, team training, assistance during regulatory inspections.'
-          },
-          {
-            icon: Briefcase,
-            title: 'Compliance Programs',
-            description: 'Design and implementation of anti-corruption compliance programs, risk mapping, employee training.'
+            icon: Gavel,
+            title: 'Interviews, searches, police custody',
+            description: 'Immediate assistance in emergency situations: interviews, searches, summonses, police custody. Preparation, legal presence, securing defense rights, with constant discretion.'
           },
           {
             icon: AlertTriangle,
-            title: 'Crisis Management & Internal Investigations',
-            description: 'Assistance during searches and interviews, internal investigations, strategic advice during investigation phase.'
+            title: 'Crisis management and internal investigations',
+            description: 'Support in sensitive cases: organizing internal investigations, preserving evidence, coordinating the strategy. Objective: regain control, limit risk, secure the future.'
+          },
+          {
+            icon: Scale,
+            title: 'Victims – civil party status',
+            description: 'Assistance for victims of criminal offenses: filing complaints, civil party status, and compensation for damages. Evidence strategy and procedural follow-up until compensation.'
           }
         ]
       },
@@ -133,8 +133,8 @@ export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
           'Money laundering',
           'Terrorist financing',
           'Insider trading and market abuse',
-          'Counterfeiting and IP crimes',
-          'Labor and environmental criminal law'
+          'Circumvention of international sanctions',
+          'Labor criminal law'
         ]
       },
       approach: {
@@ -164,7 +164,7 @@ export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
         reasons: [
           {
             title: 'Dual National and International Expertise',
-            text: 'Mastery of French law and international standards (FCPA, UK Bribery Act, OECD conventions).'
+            text: 'Dual national and international expertise, with a practice in litigation and advisory in French, European, and international contexts.'
           },
           {
             title: 'Business-Oriented Approach',
@@ -187,7 +187,7 @@ export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
 
   return (
     <div className="pt-20">
-      <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-20">
+      <section className="bg-primary-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-6">
             <Briefcase size={48} />
@@ -238,7 +238,7 @@ export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
             {t.approach.steps.map((step, index) => (
               <div key={index} className="bg-slate-50 p-8 rounded-sm">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-slate-800 text-white rounded-full flex items-center justify-center font-bold">
+                  <div className="w-10 h-10 bg-primary-700 text-white rounded-full flex items-center justify-center font-bold">
                     {index + 1}
                   </div>
                   <h3 className="text-xl font-semibold text-slate-900">{step.title}</h3>
@@ -255,7 +255,7 @@ export function BusinessCriminalPage({ language }: BusinessCriminalPageProps) {
           <h2 className="text-3xl font-serif text-slate-900 mb-12">{t.why.title}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {t.why.reasons.map((reason, index) => (
-              <div key={index} className="border-l-4 border-slate-800 pl-6">
+              <div key={index} className="border-l-4 border-primary-700 pl-6">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">{reason.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{reason.text}</p>
               </div>

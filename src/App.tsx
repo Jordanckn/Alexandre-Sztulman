@@ -11,8 +11,13 @@ import { SanctionsPage } from './pages/SanctionsPage';
 import { BusinessCriminalPage } from './pages/BusinessCriminalPage';
 import { InvestmentDisputesPage } from './pages/InvestmentDisputesPage';
 import { BlogPage } from './pages/BlogPage';
+import { BlogArticlePage } from './pages/BlogArticlePage';
 import { ContactPage } from './pages/ContactPage';
 import { CookiesPage } from './pages/CookiesPage';
+import { AdminLayout } from './components/AdminLayout';
+import { AdminLoginPage } from './pages/admin/Login';
+import { AdminDashboard } from './pages/admin/Dashboard';
+import { AdminEditor } from './pages/admin/Editor';
 import { Language } from './types';
 
 function ScrollToTop() {
@@ -33,7 +38,7 @@ function AppContent() {
     const path = location.pathname;
 
     if (language === 'fr') {
-      switch(path) {
+      switch (path) {
         case '/':
           return {
             title: 'Avocat Sanctions Internationales & Droit Pénal des Affaires',
@@ -51,13 +56,13 @@ function AppContent() {
           };
         case '/expertise/business-criminal':
           return {
-            title: 'Droit Pénal des Affaires & Compliance',
-            description: 'Défense pénale des entreprises et dirigeants. Corruption, fraude, blanchiment, programmes de conformité.'
+            title: 'Droit Pénal des Affaires',
+            description: 'Défense pénale des entreprises et dirigeants. Corruption, fraude, blanchiment, défense devant les juridictions pénales.'
           };
         case '/expertise/investment-disputes':
           return {
-            title: 'Contentieux International des Investissements',
-            description: 'Arbitrage investisseur-État, protection des investissements transfrontaliers. Expertise CIRDI et CNUDCI.'
+            title: 'Droit des investissements internationaux',
+            description: 'Conseil et contentieux en droit international des investissements et opérations transfrontalières.'
           };
         case '/blog':
           return {
@@ -81,7 +86,7 @@ function AppContent() {
           };
       }
     } else {
-      switch(path) {
+      switch (path) {
         case '/':
           return {
             title: 'Attorney International Sanctions & Business Criminal Law',
@@ -99,13 +104,13 @@ function AppContent() {
           };
         case '/expertise/business-criminal':
           return {
-            title: 'Business Criminal Law & Compliance',
-            description: 'Corporate criminal defense. Corruption, fraud, money laundering, compliance programs.'
+            title: 'Business Criminal Law',
+            description: 'Corporate criminal defense. Corruption, fraud, money laundering, defense before criminal courts.'
           };
         case '/expertise/investment-disputes':
           return {
-            title: 'International Investment Disputes',
-            description: 'Investor-State arbitration, cross-border investment protection. ICSID and UNCITRAL expertise.'
+            title: 'International Investment Law',
+            description: 'Counsel and litigation in international investment law and cross-border operations.'
           };
         case '/blog':
           return {
@@ -145,8 +150,11 @@ function AppContent() {
         language={language}
         path={location.pathname}
       />
+
       <div className="min-h-screen bg-white">
-        <Header language={language} onLanguageChange={setLanguage} />
+        {!location.pathname.startsWith('/admin') && (
+          <Header language={language} onLanguageChange={setLanguage} />
+        )}
         <Routes>
           <Route path="/" element={<HomePage language={language} onContactClick={handleContactClick} />} />
           <Route path="/about" element={<AboutPage language={language} />} />
@@ -154,10 +162,21 @@ function AppContent() {
           <Route path="/expertise/business-criminal" element={<BusinessCriminalPage language={language} />} />
           <Route path="/expertise/investment-disputes" element={<InvestmentDisputesPage language={language} />} />
           <Route path="/blog" element={<BlogPage language={language} />} />
+          <Route path="/blog/:slug" element={<BlogArticlePage language={language} />} />
           <Route path="/contact" element={<ContactPage language={language} />} />
           <Route path="/cookies" element={<CookiesPage language={language} />} />
+
+          {/* Admin Routes */}
+          <Route path="/admin/login" element={<AdminLoginPage />} />
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="new" element={<AdminEditor />} />
+            <Route path="edit/:id" element={<AdminEditor />} />
+          </Route>
         </Routes>
-        <Footer language={language} />
+        {!location.pathname.startsWith('/admin') && (
+          <Footer language={language} />
+        )}
         <CookieBanner language={language} />
       </div>
     </>
