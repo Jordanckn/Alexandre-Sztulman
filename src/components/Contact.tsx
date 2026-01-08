@@ -197,14 +197,14 @@ export function Contact({ language }: ContactProps) {
 
             <div className="bg-slate-100 h-64 rounded-sm overflow-hidden shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m12!1m3!1d2624.238612198083!2d2.3081023772591605!3d48.87194897133481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc5df4a15f3%3A0x250c4ac77930306!2s22%20Av.%20Franklin%20Delano%20Roosevelt%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1704733454000!5m2!1sfr!2sfr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.238612198083!2d2.3077161!3d48.8719455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc5df4a15f3%3A0x250c4ac77930306!2s22%20Av.%20Franklin%20Delano%20Roosevelt%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1736362800000!5m2!1sfr!2sfr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation du cabinet"
+                title="Localisation du cabinet - 22 avenue Franklin D. Roosevelt, 75008 Paris"
               ></iframe>
             </div>
           </div>
