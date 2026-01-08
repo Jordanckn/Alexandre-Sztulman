@@ -175,11 +175,11 @@ export function About({ language }: AboutProps) {
                 </h3>
               )}
               <p
-                className="text-lg text-slate-700 leading-relaxed mb-4 text-justify"
+                className="text-base md:text-lg text-slate-700 leading-relaxed mb-4 mobile-justify-hyphens"
                 dangerouslySetInnerHTML={{ __html: section.text }}
               />
               {section.list && (
-                <ul className="list-disc list-inside space-y-2 ml-4 text-lg text-slate-700 text-justify">
+                <ul className="list-disc list-inside space-y-2 ml-4 text-base md:text-lg text-slate-700 mobile-justify-hyphens">
                   {section.list.map((item, idx) => (
                     <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
                   ))}

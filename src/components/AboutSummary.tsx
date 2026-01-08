@@ -29,7 +29,7 @@ export function AboutSummary({ language }: AboutSummaryProps) {
 
         <div className="max-w-4xl">
           <p
-            className="text-base md:text-lg text-slate-700 leading-relaxed mb-6 md:mb-8 text-justify"
+            className="text-base md:text-lg text-slate-700 leading-relaxed mb-6 md:mb-8 mobile-justify-hyphens"
             dangerouslySetInnerHTML={{ __html: t.summary }}
           />
           <Link
