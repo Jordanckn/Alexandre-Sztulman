@@ -41,8 +41,8 @@ function AppContent() {
       switch (path) {
         case '/':
           return {
-            title: 'Avocat Sanctions Internationales & Droit Pénal des Affaires',
-            description: 'Cabinet d\'avocat spécialisé en sanctions internationales de l\'UE, droit pénal des affaires et contentieux des investissements. Maître Alexandre Sztulman, Docteur en Droit, Barreau de Paris.'
+            title: 'Avocat Sanctions & Droit Pénal | Me Alexandre Sztulman',
+            description: 'Cabinet d\'avocat spécialisé en sanctions internationales de l\'UE, droit pénal des affaires et investissements. Me Alexandre Sztulman, Docteur en Droit, Sorbonne.'
           };
         case '/about':
           return {
@@ -51,18 +51,18 @@ function AppContent() {
           };
         case '/expertise/sanctions':
           return {
-            title: 'Sanctions Internationales de l\'UE',
-            description: 'Expert en contentieux des sanctions européennes. Représentation devant les juridictions de l\'UE, conseil en conformité, gestion de crise.'
+            title: 'Sanctions Internationales UE | Me Alexandre Sztulman',
+            description: 'Expert en contentieux des sanctions européennes. Représentation devant les juridictions de l\'UE, conseil en conformité et gestion de crise.'
           };
         case '/expertise/business-criminal':
           return {
-            title: 'Droit Pénal des Affaires',
-            description: 'Défense pénale des entreprises et dirigeants. Corruption, fraude, blanchiment, défense devant les juridictions pénales.'
+            title: 'Droit Pénal des Affaires | Me Alexandre Sztulman',
+            description: 'Défense pénale des entreprises et dirigeants : corruption, fraude, blanchiment. Expertise devant les juridictions pénales nationales et internationales.'
           };
         case '/expertise/investment-disputes':
           return {
-            title: 'Droit des investissements internationaux',
-            description: 'Conseil et contentieux en droit international des investissements et opérations transfrontalières.'
+            title: 'Droit des Investissements | Me Alexandre Sztulman',
+            description: 'Conseil et contentieux en droit international des investissements, arbitrage international et opérations transfrontalières complexes.'
           };
         case '/blog':
           return {
@@ -89,8 +89,8 @@ function AppContent() {
       switch (path) {
         case '/':
           return {
-            title: 'Attorney International Sanctions & Business Criminal Law',
-            description: 'Law firm specialized in EU international sanctions, business criminal law and investment disputes. Alexandre Sztulman, PhD in Law, Paris Bar.'
+            title: 'International Sanctions & Criminal Law | Alex Sztulman',
+            description: 'Law firm specialized in EU sanctions, business criminal law and investment disputes. Dr. Alexandre Sztulman, Paris Bar, Sorbonne professor.'
           };
         case '/about':
           return {

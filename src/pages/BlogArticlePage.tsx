@@ -5,6 +5,7 @@ import { supabase } from '../lib/supabase';
 import { Language } from '../types';
 import { Calendar, ArrowLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { ImageCarousel } from '../components/ImageCarousel';
 
 interface BlogArticlePageProps {
     language: Language;
@@ -13,6 +14,7 @@ interface BlogArticlePageProps {
 interface Post {
     id: string;
     title: string;
+    slug: string;
     content: string;
     excerpt: string;
     category: string;
@@ -47,6 +49,27 @@ export function BlogArticlePage({ language }: BlogArticlePageProps) {
         setLoading(false);
     };
 
+    // Function to get carousel images for the post
+    const getCarouselImages = (post: Post): string[] => {
+        const images: string[] = [];
+
+        if (post.cover_image_url) {
+            images.push(post.cover_image_url);
+        }
+
+        // Add additional image for EU Sanctions Litigation publication
+        const additionalImage = 'https://qoshuifjdjulpizikemg.supabase.co/storage/v1/object/public/blog-images/publication-EU%20Sanctions-Litigation-Fundamental-Rights-and%20International-Security.jpg';
+
+        // Check if this is the EU Sanctions article (by title or slug)
+        if (post.title.toLowerCase().includes('sanctions') ||
+            post.title.toLowerCase().includes('eu') ||
+            post.slug.toLowerCase().includes('sanctions')) {
+            images.push(additionalImage);
+        }
+
+        return images;
+    };
+
     if (loading) {
         return (
             <div className="pt-32 pb-20 text-center">
@@ -71,14 +94,11 @@ export function BlogArticlePage({ language }: BlogArticlePageProps) {
                 <meta name="description" content={post.seo_description || post.excerpt} />
             </Helmet>
 
-            {/* Hero Section */}
+            {/* Hero Section with Carousel */}
             <div className="bg-slate-900 text-white py-20 relative overflow-hidden">
-                {post.cover_image_url && (
-                    <div className="absolute inset-0">
-                        <img src={post.cover_image_url} alt={post.title} className="w-full h-full object-cover opacity-30" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
-                    </div>
-                )}
+                <div className="absolute inset-0">
+                    <ImageCarousel images={getCarouselImages(post)} title={post.title} autoPlayInterval={5000} />
+                </div>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <Link to="/blog" className="inline-flex items-center gap-2 text-slate-300 hover:text-white mb-8 transition-colors">
                         <ArrowLeft size={20} />
