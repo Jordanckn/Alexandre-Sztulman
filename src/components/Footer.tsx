@@ -150,14 +150,14 @@ export function Footer({ language }: FooterProps) {
             <h3 className="text-sm font-semibold mb-4 font-serif">Légal</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <button className="text-white/80 hover:text-white transition-colors">
+                <Link to="/mentions-legales" className="text-white/80 hover:text-white transition-colors">
                   {t.legal}
-                </button>
+                </Link>
               </li>
               <li>
-                <button className="text-white/80 hover:text-white transition-colors">
+                <Link to="/confidentialite" className="text-white/80 hover:text-white transition-colors">
                   {t.privacy}
-                </button>
+                </Link>
               </li>
               <li>
                 <Link to="/cookies" className="text-white/80 hover:text-white transition-colors">

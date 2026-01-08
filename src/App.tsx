@@ -14,6 +14,8 @@ import { BlogPage } from './pages/BlogPage';
 import { BlogArticlePage } from './pages/BlogArticlePage';
 import { ContactPage } from './pages/ContactPage';
 import { CookiesPage } from './pages/CookiesPage';
+import { LegalNoticePage } from './pages/LegalNoticePage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { AdminLayout } from './components/AdminLayout';
 import { AdminLoginPage } from './pages/admin/Login';
 import { AdminDashboard } from './pages/admin/Dashboard';
@@ -79,6 +81,16 @@ function AppContent() {
             title: 'Politique de Cookies',
             description: 'Informations sur l\'utilisation des cookies sur notre site et comment gérer vos préférences.'
           };
+        case '/mentions-legales':
+          return {
+            title: 'Mentions Légales',
+            description: 'Mentions légales du cabinet de Maître Alexandre Sztulman.'
+          };
+        case '/confidentialite':
+          return {
+            title: 'Politique de Confidentialité',
+            description: 'Politique de confidentialité et protection des données personnelles.'
+          };
         default:
           return {
             title: 'Avocat Sanctions Internationales',
@@ -127,6 +139,16 @@ function AppContent() {
             title: 'Cookie Policy',
             description: 'Information about cookie usage on our site and how to manage your preferences.'
           };
+        case '/mentions-legales':
+          return {
+            title: 'Legal Notice',
+            description: 'Legal notice of the law firm of Maître Alexandre Sztulman.'
+          };
+        case '/confidentialite':
+          return {
+            title: 'Privacy Policy',
+            description: 'Privacy policy and personal data protection.'
+          };
         default:
           return {
             title: 'Attorney International Sanctions',
@@ -165,6 +187,8 @@ function AppContent() {
           <Route path="/blog/:slug" element={<BlogArticlePage language={language} />} />
           <Route path="/contact" element={<ContactPage language={language} />} />
           <Route path="/cookies" element={<CookiesPage language={language} />} />
+          <Route path="/mentions-legales" element={<LegalNoticePage language={language} />} />
+          <Route path="/confidentialite" element={<PrivacyPolicyPage language={language} />} />
 
           {/* Admin Routes */}
           <Route path="/admin/login" element={<AdminLoginPage />} />
