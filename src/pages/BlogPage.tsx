@@ -1,12 +1,92 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Calendar, ArrowRight, ExternalLink } from 'lucide-react';
+import { BookOpen, Calendar, ArrowRight, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Language } from '../types';
 import { supabase } from '../lib/supabase';
 
 interface BlogPageProps {
   language: Language;
+}
+
+function PublicationCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 2);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const goToNext = () => setCurrentSlide((prev) => (prev + 1) % 2);
+  const goToPrev = () => setCurrentSlide((prev) => (prev - 1 + 2) % 2);
+
+  return (
+    <div className="relative bg-primary-700 h-96 rounded-sm overflow-hidden group">
+      {/* Slide 1: Image stylisée */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center text-white p-8 transition-opacity duration-1000 ${
+          currentSlide === 0 ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <div className="text-center">
+          <BookOpen size={80} className="mx-auto mb-6 opacity-90" />
+          <h3 className="text-2xl font-serif mb-3">EU Sanctions Litigation</h3>
+          <p className="text-sm opacity-75 mb-4">Fundamental Rights and International Security</p>
+          <div className="text-xs opacity-60">
+            <p>Alexandre Sztulman</p>
+            <p className="mt-1">Routledge 2025</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Slide 2: Image réelle du livre */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-1000 ${
+          currentSlide === 1 ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <div className="bg-white p-3 rounded-sm shadow-xl max-h-full flex items-center justify-center">
+          <img
+            src="https://qoshuifjdjulpizikemg.supabase.co/storage/v1/object/public/blog-images/publication-EU%20Sanctions-Litigation-Fundamental-Rights-and%20International-Security.jpg"
+            alt="EU Sanctions Litigation - Fundamental Rights and International Security"
+            className="max-h-[340px] w-auto object-contain"
+          />
+        </div>
+      </div>
+
+      {/* Navigation buttons */}
+      <button
+        onClick={goToPrev}
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-1.5 md:p-2 rounded-full transition-all opacity-70 md:opacity-0 md:group-hover:opacity-100 z-10"
+        aria-label="Image précédente"
+      >
+        <ChevronLeft size={20} className="md:w-6 md:h-6" />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-1.5 md:p-2 rounded-full transition-all opacity-70 md:opacity-0 md:group-hover:opacity-100 z-10"
+        aria-label="Image suivante"
+      >
+        <ChevronRight size={20} className="md:w-6 md:h-6" />
+      </button>
+
+      {/* Dots indicator */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {[0, 1].map((index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`h-2 rounded-full transition-all ${
+              index === currentSlide ? 'bg-white w-6 md:w-8' : 'bg-white/50 hover:bg-white/75 w-2'
+            }`}
+            aria-label={`Aller à l'image ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 interface Post {
@@ -119,17 +199,7 @@ export function BlogPage({ language }: BlogPageProps) {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-primary-700 h-96 rounded-sm flex items-center justify-center text-white p-8">
-              <div className="text-center">
-                <BookOpen size={80} className="mx-auto mb-6 opacity-90" />
-                <h3 className="text-2xl font-serif mb-3">EU Sanctions Litigation</h3>
-                <p className="text-sm opacity-75 mb-4">Fundamental Rights and International Security</p>
-                <div className="text-xs opacity-60">
-                  <p>Alexandre Sztulman</p>
-                  <p className="mt-1">Routledge 2025</p>
-                </div>
-              </div>
-            </div>
+            <PublicationCarousel />
 
             <div className="space-y-6">
               <h2 className="text-3xl font-serif text-slate-900">{t.featured.title}</h2>

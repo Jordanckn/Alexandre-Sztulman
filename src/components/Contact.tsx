@@ -6,6 +6,8 @@ interface ContactProps {
   language: Language;
 }
 
+
+
 export function Contact({ language }: ContactProps) {
   const [formData, setFormData] = useState({
     name: '',
@@ -177,7 +179,7 @@ export function Contact({ language }: ContactProps) {
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">LinkedIn</h3>
                   <a
-                    href="https://www.linkedin.com/in/alexandre-sztulman"
+                    href="https://www.linkedin.com/in/asztulman/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-slate-600 hover:text-primary-700 transition-colors"
@@ -193,11 +195,17 @@ export function Contact({ language }: ContactProps) {
               </div>
             </div>
 
-            <div className="bg-slate-100 h-64 rounded-sm flex items-center justify-center text-slate-500">
-              <div className="text-center">
-                <MapPin size={48} className="mx-auto mb-2 opacity-50" />
-                <p className="text-sm">Paris, 8e arrondissement</p>
-              </div>
+            <div className="bg-slate-100 h-64 rounded-sm overflow-hidden shadow-sm">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m12!1m3!1d2624.238612198083!2d2.3081023772591605!3d48.87194897133481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc5df4a15f3%3A0x250c4ac77930306!2s22%20Av.%20Franklin%20Delano%20Roosevelt%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1704733454000!5m2!1sfr!2sfr"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localisation du cabinet"
+              ></iframe>
             </div>
           </div>
         </div>

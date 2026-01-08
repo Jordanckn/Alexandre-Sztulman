@@ -7,14 +7,24 @@ interface SEOProps {
   language: Language;
   path?: string;
   type?: string;
+  image?: string;
 }
 
-export function SEO({ title, description, language, path = '', type = 'website' }: SEOProps) {
+export function SEO({
+  title,
+  description,
+  language,
+  path = '',
+  type = 'website',
+  image = 'https://alexandre-sztulman.com/og-image.jpg'
+}: SEOProps) {
   const siteName = language === 'fr'
     ? 'Maître Alexandre Sztulman - Avocat'
     : 'Alexandre Sztulman - Attorney at Law';
 
-  const fullTitle = `${title} | ${siteName}`;
+  const fullTitle = title.includes(siteName) || title.length > 50
+    ? title
+    : `${title} | ${siteName}`;
   const siteUrl = 'https://alexandre-sztulman.com';
   const fullUrl = `${siteUrl}${path}`;
 
@@ -29,11 +39,16 @@ export function SEO({ title, description, language, path = '', type = 'website' 
       <meta property="og:description" content={description} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:site_name" content={siteName} />
+      <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:locale" content={language === 'fr' ? 'fr_FR' : 'en_US'} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@AlexSztulman" />
 
       <link rel="canonical" href={fullUrl} />
       <meta name="robots" content="index, follow" />
@@ -54,10 +69,10 @@ export function SEO({ title, description, language, path = '', type = 'website' 
             "postalCode": "75008",
             "addressCountry": "FR"
           },
-          "telephone": "+33142963240",
+          "telephone": "+33659410915",
           "email": "asztulman@moliere-avocats.fr",
           "sameAs": [
-            "https://www.linkedin.com/in/alexandre-sztulman"
+            "https://www.linkedin.com/in/asztulman/"
           ],
           "knowsAbout": [
             "EU International Sanctions",

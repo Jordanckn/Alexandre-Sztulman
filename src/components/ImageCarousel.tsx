@@ -5,9 +5,10 @@ interface ImageCarouselProps {
   images: string[];
   autoPlayInterval?: number;
   title: string;
+  objectFit?: 'cover' | 'contain';
 }
 
-export function ImageCarousel({ images, autoPlayInterval = 5000, title }: ImageCarouselProps) {
+export function ImageCarousel({ images, autoPlayInterval = 5000, title, objectFit = 'cover' }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -48,11 +49,11 @@ export function ImageCarousel({ images, autoPlayInterval = 5000, title }: ImageC
             <img
               src={image}
               alt={`${title} - Image ${index + 1}`}
-              className="w-full h-full object-cover"
+              className={`w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+        {objectFit === 'cover' && <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>}
       </div>
 
       {/* Navigation Buttons - Only show if more than 1 image */}

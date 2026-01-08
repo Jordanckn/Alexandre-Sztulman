@@ -66,8 +66,8 @@ function AppContent() {
           };
         case '/blog':
           return {
-            title: 'Publications & Actualités',
-            description: 'Publications académiques, analyses juridiques et actualités du cabinet. EU Sanctions Litigation (Routledge, 2025).'
+            title: 'Publications & Sanctions | Me Alexandre Sztulman',
+            description: 'Retrouvez les publications académiques, analyses et actualités du cabinet sur les sanctions européennes et le droit pénal des affaires.'
           };
         case '/contact':
           return {
@@ -114,8 +114,8 @@ function AppContent() {
           };
         case '/blog':
           return {
-            title: 'Publications & News',
-            description: 'Academic publications, legal analysis and firm news. EU Sanctions Litigation (Routledge, 2025).'
+            title: 'Publications & News | Alex Sztulman',
+            description: 'Academic publications, legal analysis and news on EU international sanctions and business criminal law.'
           };
         case '/contact':
           return {

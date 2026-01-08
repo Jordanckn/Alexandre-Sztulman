@@ -76,7 +76,7 @@ export function Footer({ language }: FooterProps) {
             </a>
             <div className="flex gap-3 mt-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/asztulman/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-sm transition-colors"
