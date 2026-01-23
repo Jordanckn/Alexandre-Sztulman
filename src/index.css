@@ -2,25 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font-face fallbacks to prevent CLS */
-@font-face {
-  font-family: 'EB Garamond Fallback';
-  src: local('Times New Roman');
-  ascent-override: 95%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-  size-adjust: 96%;
-}
-
-@font-face {
-  font-family: 'Playfair Display Fallback';
-  src: local('Georgia');
-  ascent-override: 97%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-  size-adjust: 105%;
-}
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -30,7 +11,6 @@
 
   body {
     @apply text-slate-900 antialiased;
-    font-family: 'EB Garamond', 'EB Garamond Fallback', Georgia, serif;
   }
 
   * {

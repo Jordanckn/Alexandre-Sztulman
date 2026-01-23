@@ -19,9 +19,8 @@ export default {
         },
       },
       fontFamily: {
-        garamond: ['"EB Garamond"', '"EB Garamond Fallback"', 'Georgia', 'serif'],
-        trajan: ['"Playfair Display"', '"Playfair Display Fallback"', 'Georgia', 'serif'],
-        serif: ['"EB Garamond"', '"EB Garamond Fallback"', 'Georgia', 'serif'],
+        garamond: ['"EB Garamond"', 'serif'],
+        trajan: ['"Playfair Display"', 'serif'],
       },
     },
   },
