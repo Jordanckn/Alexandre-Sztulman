@@ -26,9 +26,8 @@ function PublicationCarousel() {
     <div className="relative bg-primary-700 h-96 rounded-sm overflow-hidden group">
       {/* Slide 1: Image stylisée */}
       <div
-        className={`absolute inset-0 flex items-center justify-center text-white p-8 transition-opacity duration-1000 ${
-          currentSlide === 0 ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`absolute inset-0 flex items-center justify-center text-white p-8 transition-opacity duration-1000 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0'
+          }`}
       >
         <div className="text-center">
           <BookOpen size={80} className="mx-auto mb-6 opacity-90" />
@@ -43,9 +42,8 @@ function PublicationCarousel() {
 
       {/* Slide 2: Image réelle du livre */}
       <div
-        className={`absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-1000 ${
-          currentSlide === 1 ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-1000 ${currentSlide === 1 ? 'opacity-100' : 'opacity-0'
+          }`}
       >
         <div className="bg-white p-3 rounded-sm shadow-xl max-h-full flex items-center justify-center">
           <img
@@ -78,9 +76,8 @@ function PublicationCarousel() {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`h-2 rounded-full transition-all ${
-              index === currentSlide ? 'bg-white w-6 md:w-8' : 'bg-white/50 hover:bg-white/75 w-2'
-            }`}
+            className={`h-2 rounded-full transition-all ${index === currentSlide ? 'bg-white w-6 md:w-8' : 'bg-white/50 hover:bg-white/75 w-2'
+              }`}
             aria-label={`Aller à l'image ${index + 1}`}
           />
         ))}
@@ -111,11 +108,11 @@ export function BlogPage({ language }: BlogPageProps) {
         label: 'Publication majeure',
         title: 'EU Sanctions Litigation: Fundamental Rights and International Security',
         date: '2025',
-        description: 'Ouvrage de référence publié chez Routledge en 2025, il propose une analyse approfondie du contentieux des sanctions internationales au niveau de l’Union européenne, en examinant le contrôle juridictionnel des mesures restrictives et l’articulation entre impératifs de sécurité internationale et protection des libertés fondamentales.',
+        description: 'Cet ouvrage examine de manière approfondie l\'approche de la justice de l\'Union européenne (UE) en matière de sanctions internationales, en s\'appuyant sur la jurisprudence récente de la Cour de justice et du Tribunal. Il aborde le cadre procédural régissant le contrôle juridictionnel, ainsi qu\'une évaluation substantielle des mesures restrictives sous l\'angle de leur légalité et de leur conformité aux droits fondamentaux et aux garanties procédurales.\n\nEn tant que pierre angulaire de la politique étrangère et de sécurité commune (PESC) de l\'UE, les mesures restrictives, en particulier les sanctions internationales, constituent le principal outil de l\'Union pour répondre aux actions contraires à ses valeurs fondamentales. Cliquez sur "En savoir plus" pour découvrir la suite.',
         publisher: 'Routledge',
-        pages: '256 pages',
-        isbn: 'ISBN: 9781041019411',
-        button: 'En savoir plus'
+        button: 'En savoir plus',
+        thesisTitle: 'Thèse de doctorat',
+        thesisLink: 'Consulter la thèse sur theses.fr'
       },
       articles: {
         title: 'Derniers articles'
@@ -138,11 +135,11 @@ export function BlogPage({ language }: BlogPageProps) {
         label: 'Major Publication',
         title: 'EU Sanctions Litigation: Fundamental Rights and International Security',
         date: '2025',
-        description: 'A reference work published by Routledge in 2025, it offers an in-depth analysis of international sanctions litigation at the European Union level, examining judicial review of restrictive measures and the interplay between international security imperatives and the protection of fundamental freedoms.',
+        description: 'This book comprehensively examines the European Union (EU) judiciary’s approach to international sanctions, drawing on recent case law from the Court of Justice and the General Court. It addresses the procedural framework governing judicial review, alongside a substantive evaluation of restrictive measures in terms of their legality and conformity with fundamental rights and procedural guarantees.\n\nAs a cornerstone of the EU’s Common Foreign and Security Policy (CFSP), restrictive measures, particularly international sanctions, serve as the Union’s primary tool for addressing actions that conflict with its core values. Click on "Learn more" to read the full description.',
         publisher: 'Routledge',
-        pages: '256 pages',
-        isbn: 'ISBN: 9781041019411',
-        button: 'Learn more'
+        button: 'Learn more',
+        thesisTitle: 'Doctoral Thesis',
+        thesisLink: 'View thesis on theses.fr'
       },
       articles: {
         title: 'Latest Articles'
@@ -211,10 +208,7 @@ export function BlogPage({ language }: BlogPageProps) {
                 <span>{t.featured.publisher}</span>
               </div>
               <p className="text-slate-600 leading-relaxed">{t.featured.description}</p>
-              <div className="space-y-1 text-sm text-slate-500">
-                <p>{t.featured.pages}</p>
-                <p>{t.featured.isbn}</p>
-              </div>
+
               <a
                 href="https://www.routledge.com/EU-Sanctions-Litigation-Fundamental-Rights-and-International-Security/Sztulman/p/book/9781041019411"
                 target="_blank"
@@ -224,6 +218,19 @@ export function BlogPage({ language }: BlogPageProps) {
                 {t.featured.button}
                 <ExternalLink size={18} />
               </a>
+
+              <div className="pt-6 border-t border-slate-100">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">{t.featured.thesisTitle}</h3>
+                <a
+                  href="https://theses.fr/2021PA100169"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 font-medium group"
+                >
+                  {t.featured.thesisLink}
+                  <ExternalLink size={14} className="transition-transform group-hover:translate-x-1" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

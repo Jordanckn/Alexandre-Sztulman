@@ -168,16 +168,16 @@ export function Footer({ language }: FooterProps) {
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-8">
+        <div className="border-t border-white/20 pt-8 pb-12 sm:pb-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-white/70">{t.copyright}</p>
-            <p className="text-xs text-white/70">
+            <p className="text-xs text-white/90">{t.copyright}</p>
+            <p className="text-xs text-white/90">
               {t.credit}{' '}
               <a
                 href="https://webfityou.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-white/80 transition-colors"
+                className="text-white hover:text-white/80 transition-colors underline"
               >
                 WebFitYou
               </a>

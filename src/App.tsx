@@ -1,26 +1,35 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { CookieBanner } from './components/CookieBanner';
 import { SEO } from './components/SEO';
-import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { SanctionsPage } from './pages/SanctionsPage';
-import { BusinessCriminalPage } from './pages/BusinessCriminalPage';
-import { InvestmentDisputesPage } from './pages/InvestmentDisputesPage';
-import { BlogPage } from './pages/BlogPage';
-import { BlogArticlePage } from './pages/BlogArticlePage';
-import { ContactPage } from './pages/ContactPage';
-import { CookiesPage } from './pages/CookiesPage';
-import { LegalNoticePage } from './pages/LegalNoticePage';
-import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
-import { AdminLayout } from './components/AdminLayout';
-import { AdminLoginPage } from './pages/admin/Login';
-import { AdminDashboard } from './pages/admin/Dashboard';
-import { AdminEditor } from './pages/admin/Editor';
 import { Language } from './types';
+
+// Lazy load pages
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
+const SanctionsPage = lazy(() => import('./pages/SanctionsPage').then(module => ({ default: module.SanctionsPage })));
+const BusinessCriminalPage = lazy(() => import('./pages/BusinessCriminalPage').then(module => ({ default: module.BusinessCriminalPage })));
+const InvestmentDisputesPage = lazy(() => import('./pages/InvestmentDisputesPage').then(module => ({ default: module.InvestmentDisputesPage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
+const BlogArticlePage = lazy(() => import('./pages/BlogArticlePage').then(module => ({ default: module.BlogArticlePage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
+const CookiesPage = lazy(() => import('./pages/CookiesPage').then(module => ({ default: module.CookiesPage })));
+const LegalNoticePage = lazy(() => import('./pages/LegalNoticePage').then(module => ({ default: module.LegalNoticePage })));
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage').then(module => ({ default: module.PrivacyPolicyPage })));
+const AdminLayout = lazy(() => import('./components/AdminLayout').then(module => ({ default: module.AdminLayout })));
+const AdminLoginPage = lazy(() => import('./pages/admin/Login').then(module => ({ default: module.AdminLoginPage })));
+const AdminDashboard = lazy(() => import('./pages/admin/Dashboard').then(module => ({ default: module.AdminDashboard })));
+const AdminEditor = lazy(() => import('./pages/admin/Editor').then(module => ({ default: module.AdminEditor })));
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-[50vh] flex items-center justify-center">
+    <div className="w-8 h-8 border-4 border-primary-700 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -173,31 +182,35 @@ function AppContent() {
         path={location.pathname}
       />
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white flex flex-col">
         {!location.pathname.startsWith('/admin') && (
           <Header language={language} onLanguageChange={setLanguage} />
         )}
-        <Routes>
-          <Route path="/" element={<HomePage language={language} onContactClick={handleContactClick} />} />
-          <Route path="/about" element={<AboutPage language={language} />} />
-          <Route path="/expertise/sanctions" element={<SanctionsPage language={language} />} />
-          <Route path="/expertise/business-criminal" element={<BusinessCriminalPage language={language} />} />
-          <Route path="/expertise/investment-disputes" element={<InvestmentDisputesPage language={language} />} />
-          <Route path="/blog" element={<BlogPage language={language} />} />
-          <Route path="/blog/:slug" element={<BlogArticlePage language={language} />} />
-          <Route path="/contact" element={<ContactPage language={language} />} />
-          <Route path="/cookies" element={<CookiesPage language={language} />} />
-          <Route path="/mentions-legales" element={<LegalNoticePage language={language} />} />
-          <Route path="/confidentialite" element={<PrivacyPolicyPage language={language} />} />
+        <main className="flex-grow">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<HomePage language={language} onContactClick={handleContactClick} />} />
+              <Route path="/about" element={<AboutPage language={language} />} />
+              <Route path="/expertise/sanctions" element={<SanctionsPage language={language} />} />
+              <Route path="/expertise/business-criminal" element={<BusinessCriminalPage language={language} />} />
+              <Route path="/expertise/investment-disputes" element={<InvestmentDisputesPage language={language} />} />
+              <Route path="/blog" element={<BlogPage language={language} />} />
+              <Route path="/blog/:slug" element={<BlogArticlePage language={language} />} />
+              <Route path="/contact" element={<ContactPage language={language} />} />
+              <Route path="/cookies" element={<CookiesPage language={language} />} />
+              <Route path="/mentions-legales" element={<LegalNoticePage language={language} />} />
+              <Route path="/confidentialite" element={<PrivacyPolicyPage language={language} />} />
 
-          {/* Admin Routes */}
-          <Route path="/admin/login" element={<AdminLoginPage />} />
-          <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<AdminDashboard />} />
-            <Route path="new" element={<AdminEditor />} />
-            <Route path="edit/:id" element={<AdminEditor />} />
-          </Route>
-        </Routes>
+              {/* Admin Routes */}
+              <Route path="/admin/login" element={<AdminLoginPage />} />
+              <Route path="/admin" element={<AdminLayout />}>
+                <Route index element={<AdminDashboard />} />
+                <Route path="new" element={<AdminEditor />} />
+                <Route path="edit/:id" element={<AdminEditor />} />
+              </Route>
+            </Routes>
+          </Suspense>
+        </main>
         {!location.pathname.startsWith('/admin') && (
           <Footer language={language} />
         )}

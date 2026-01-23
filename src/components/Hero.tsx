@@ -27,14 +27,15 @@ export function Hero({ language, onContactClick }: HeroProps) {
   return (
     <section id="home" className="min-h-screen flex flex-col md:flex-row items-stretch pt-20">
       {/* Image - Première sur mobile, à droite sur desktop */}
-      <div
-        className="w-full md:w-1/2 min-h-[50vh] md:min-h-0 bg-cover bg-center md:order-2"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      ></div>
+      <div className="w-full md:w-1/2 min-h-[50vh] md:min-h-0 md:order-2 relative">
+        <img
+          src={heroImage}
+          alt={t.name}
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
+        />
+      </div>
 
       {/* Texte - Deuxième sur mobile, à gauche sur desktop */}
       <div className="w-full md:w-1/2 bg-primary-700 flex items-center md:order-1">

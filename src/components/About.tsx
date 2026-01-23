@@ -10,7 +10,7 @@ export function About({ language }: AboutProps) {
       title: 'Le Cabinet de Maître Alexandre Sztulman',
       sections: [
         {
-          text: "Le cabinet de Maître Alexandre Sztulman, avocat individuel au Barreau de Paris, intervient dans des dossiers à <strong>forts enjeux juridiques, institutionnels et économiques</strong>, en France comme à l'échelle européenne."
+          text: "Le cabinet de Maître Alexandre Sztulman, avocat individuel au Barreau de Paris, intervient dans des dossiers à <strong>forts enjeux, institutionnels et économiques</strong>, en France comme à l'échelle européenne."
         },
         {
           text: "Sa pratique repose sur une <strong>approche rigoureuse, technique et stratégique</strong>, nourrie par une <strong>expertise académique reconnue</strong> et une connaissance approfondie du fonctionnement des administrations françaises et européennes."
@@ -36,10 +36,10 @@ export function About({ language }: AboutProps) {
           text: "Avant de fonder son cabinet, Maître Alexandre Sztulman a exercé au sein de <strong>cabinets d'affaires internationaux</strong>, où il a acquis une solide expérience des <strong>problématiques transfrontalières et des contentieux complexes</strong>."
         },
         {
-          text: "Il a également travaillé auprès de la <strong>Cour de justice de l'Union européenne</strong>, participant à l'analyse et au traitement de questions juridiques européennes de premier plan."
+          text: "Il a également travaillé auprès de la <strong><a href=\"https://curia.europa.eu/site/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary-700 hover:underline\">Cour de justice de l'Union européenne</a></strong>, participant à l'analyse et au traitement de questions juridiques européennes de premier plan."
         },
         {
-          text: "Son parcours institutionnel inclut aussi une expérience au sein de la <strong>Direction générale du Trésor</strong>, notamment au bureau des <strong>sanctions internationales et financières</strong> ainsi qu'au bureau de la <strong>lutte contre la criminalité financière</strong>. Cette immersion au sein de l'administration lui confère une compréhension concrète des mécanismes décisionnels, des contraintes réglementaires et des logiques de contrôle propres aux autorités publiques."
+          text: "Son parcours institutionnel inclut aussi une expérience au sein de la <strong><a href=\"https://www.tresor.economie.gouv.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-primary-700 hover:underline\">Direction générale du Trésor</a></strong>, notamment au bureau des <strong>sanctions internationales et financières</strong> ainsi qu'au bureau de la <strong>lutte contre la criminalité financière</strong>. Cette immersion au sein de l'administration lui confère une compréhension concrète des mécanismes décisionnels, des contraintes réglementaires et des logiques de contrôle propres aux autorités publiques."
         },
         {
           subtitle: "Une expertise reconnue en droit pénal, droit européen et libertés fondamentales",

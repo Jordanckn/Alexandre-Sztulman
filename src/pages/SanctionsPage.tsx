@@ -57,7 +57,7 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
             title: 'Expertise académique reconnue',
             text: (
               <>
-                Auteur d’une thèse sur le contrôle juridictionnel des mesures restrictives en droit de l'Union européenne.
+                Auteur d’une <a href="https://theses.fr/2021PA100169" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">thèse</a> sur le contrôle juridictionnel des mesures restrictives en droit de l'Union européenne.<br />
                 Auteur de l’ouvrage de référence : <a href="https://www.routledge.com/EU-Sanctions-Litigation-Fundamental-Rights-and-International-Security/Sztulman/p/book/9781041019411" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">EU Sanctions Litigation : Fundamental Rights and International Security</a>.
                 Enseignant à l’<a href="https://www.pantheonsorbonne.fr/" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">Université Paris 1 Panthéon Sorbonne</a> en droit des sanctions.
                 Chercheur invité à l’<a href="https://www.nyu.edu/" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">Université de New York</a>.
@@ -66,7 +66,11 @@ export function SanctionsPage({ language }: SanctionsPageProps) {
           },
           {
             title: 'Expérience internationale',
-            text: 'Formation en France, au Luxembourg et en Russie, complétée par une expérience au sein de la Cour de justice de l’Union européenne, en cabinets d’affaires internationaux et auprès de la direction générale du Trésor du ministère de l’Économie. Compréhension concrète des enjeux juridiques et géopolitiques, au service de la sécurisation des opérations et de la conformité dans des environnements réglementaires complexes.'
+            text: (
+              <>
+                Formation en France, au Luxembourg et en Russie, complétée par une expérience au sein de la <a href="https://curia.europa.eu/site/" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">Cour de justice de l’Union européenne</a>, en cabinets d’affaires internationaux et auprès de la <a href="https://www.tresor.economie.gouv.fr/" target="_blank" rel="noopener noreferrer" className="text-primary-700 hover:underline">direction générale du Trésor</a> du ministère de l’Économie. Compréhension concrète des enjeux juridiques et géopolitiques, au service de la sécurisation des opérations et de la conformité dans des environnements réglementaires complexes.
+              </>
+            )
           },
           {
             title: 'Approche sur-mesure',

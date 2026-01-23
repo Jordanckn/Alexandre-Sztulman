@@ -120,12 +120,11 @@ export function BlogArticlePage({ language }: BlogArticlePageProps) {
             </div>
 
             {/* Content */}
-            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 mb-20">
                 <div
-                    className="prose prose-lg prose-slate max-w-none"
-                    dangerouslySetInnerHTML={{ __html: post.content }} // Using HTML for now as we might use a Rich Text Editor later
+                    className="prose prose-lg prose-slate max-w-none text-justify [hyphens:auto] [text-justify:inter-word]"
+                    dangerouslySetInnerHTML={{ __html: post.content }}
                 />
-                {/* If content is plain text, just render it: <div className="whitespace-pre-wrap">{post.content}</div> */}
             </article>
         </div>
     );
