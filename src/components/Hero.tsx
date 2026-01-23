@@ -1,5 +1,8 @@
 import { Language } from '../types';
-import heroImage from '../assets/pexels-maria-20711682-11001707.webp';
+import heroImage480 from '../assets/hero-480.webp';
+import heroImage768 from '../assets/hero-768.webp';
+import heroImage1024 from '../assets/hero-1024.webp';
+import heroImage1440 from '../assets/hero-1440.webp';
 
 interface HeroProps {
   language: Language;
@@ -29,11 +32,16 @@ export function Hero({ language, onContactClick }: HeroProps) {
       {/* Image - Première sur mobile, à droite sur desktop */}
       <div className="w-full md:w-1/2 min-h-[50vh] md:min-h-0 md:order-2 relative">
         <img
-          src={heroImage}
+          src={heroImage768}
+          srcSet={`${heroImage480} 480w, ${heroImage768} 768w, ${heroImage1024} 1024w, ${heroImage1440} 1440w`}
+          sizes="(max-width: 768px) 100vw, 50vw"
           alt={t.name}
           className="absolute inset-0 w-full h-full object-cover"
+          width={768}
+          height={1024}
           fetchPriority="high"
           loading="eager"
+          decoding="async"
         />
       </div>
 

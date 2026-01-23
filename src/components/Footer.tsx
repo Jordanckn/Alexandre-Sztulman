@@ -53,7 +53,7 @@ export function Footer({ language }: FooterProps) {
   const t = content[language];
 
   return (
-    <footer className="bg-primary-700 text-white">
+    <footer className="bg-primary-700 text-white min-h-[400px] md:min-h-[350px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="flex flex-col gap-4">
