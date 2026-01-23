@@ -16,7 +16,7 @@ export function SEO({
   language,
   path = '',
   type = 'website',
-  image = 'https://alexandre-sztulman.com/og-image.jpg'
+  image = 'https://sztulman-avocat.com/og-image.jpg'
 }: SEOProps) {
   const siteName = language === 'fr'
     ? 'Maître Alexandre Sztulman - Avocat'
@@ -25,7 +25,7 @@ export function SEO({
   const fullTitle = title.includes(siteName) || title.length > 50
     ? title
     : `${title} | ${siteName}`;
-  const siteUrl = 'https://alexandre-sztulman.com';
+  const siteUrl = 'https://sztulman-avocat.com';
   const fullUrl = `${siteUrl}${path}`;
 
   return (
