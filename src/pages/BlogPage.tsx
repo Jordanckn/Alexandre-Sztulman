@@ -191,9 +191,7 @@ export function BlogPage({ language }: BlogPageProps) {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-block bg-primary-700 text-white px-4 py-2 rounded-sm text-sm font-medium mb-6">
-            {t.featured.label}
-          </div>
+          <h2 className="text-3xl font-serif text-slate-900 mb-12">{t.featured.label}</h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <PublicationCarousel />
